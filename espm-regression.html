@@ -1,0 +1,1089 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2! &#8212; Modules Showcase</title>
+    <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    
+        <script>
+            MathJax = {
+            loader: {load: ['[tex]/boldsymbol', '[tex]/textmacros']},
+            tex: {
+                packages: {'[+]': ['boldsymbol', 'textmacros']},
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                processEscapes: true,
+                macros: {
+                    "argmax" : "arg\\,max",
+                    "argmin" : "arg\\,min",
+                    "col"    : "col",
+                    "Span"   :  "span",
+                    "epsilon": "\\varepsilon",
+                    "EE": "\\mathbb{E}",
+                    "PP": "\\mathbb{P}",
+                    "RR": "\\mathbb{R}",
+                    "NN": "\\mathbb{N}",
+                    "ZZ": "\\mathbb{Z}",
+                    "aA": "\\mathcal{A}",
+                    "bB": "\\mathcal{B}",
+                    "cC": "\\mathcal{C}",
+                    "dD": "\\mathcal{D}",
+                    "eE": "\\mathcal{E}",
+                    "fF": "\\mathcal{F}",
+                    "gG": "\\mathcal{G}",
+                    "hH": "\\mathcal{H}",
+                }
+            },
+            svg: {
+                fontCache: 'global',
+                scale: 0.92,
+                displayAlign: "center",
+            },
+            };
+        </script>
+    
+    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/quantecon-book-theme.css?digest=bd0785fbb14d8d2bd4d9ae501d79ed8d3bc089ec" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/scripts/quantecon-book-theme.js?digest=d6d86bce9979111653c4c495e33499e1796e172a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'espm-regression';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+
+<!-- Normal Meta Tags -->
+<meta name="author" context="Jonathan Ferrari" />
+<meta name="keywords" content="" />
+<meta name="description" content=[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!  Estimated Time: ~50 minutes  One of the most important and interesting aspects of data science is makin />
+
+<!-- Twitter tags -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:title" content="[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!"/>
+<meta name="twitter:description" content="[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!  Estimated Time: ~50 minutes  One of the most important and interesting aspects of data science is makin">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:image" content="">
+
+<!-- Opengraph tags -->
+<meta property="og:title" content="[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="None" />
+<meta property="og:image" content="" />
+<meta property="og:description" content="[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!  Estimated Time: ~50 minutes  One of the most important and interesting aspects of data science is makin" />
+<meta property="og:site_name" content="Modules Showcase" />
+<meta name="theme-color" content="#ffffff" />
+
+  </head>
+<body>
+
+
+    <span id="top"></span>
+
+    <div class="qe-wrapper">
+
+        <div class="qe-main">
+
+            <div class="qe-page" id=espm-regression>
+
+                <div class="qe-page__toc">
+
+                    <div class="inner">
+
+                        
+                        <div class="qe-page__toc-header">
+                            On this page
+                        </div>
+
+
+                        <nav id="bd-toc-nav" class="qe-page__toc-nav">
+                            <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-get-started">Let’s get started!</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-data">The Data <a id="section_data"></a></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-i-review">Part I: Review<a id="section_review"></a></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-correlation-coefficient-r">1. The correlation coefficient - r<a id="subsection_1"></a></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpreting-r">Interpreting r</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#you-try">You Try:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prediction-using-simple-linear-regression">2. Prediction Using Simple Linear Regression<a id="subsection_2"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coefficient-of-determination-r-squared">3. Coefficient of Determination (R-Squared)<a id="subsection_3"></a></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-good-is-our-predictive-model">How Good is our Predictive Model?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-ii-simple-linear-regression-from-lecture">Part II: Simple Linear Regression  (from lecture)<a id="section_linreg"></a></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pollution-score-vs-asthma">Pollution Score vs. Asthma<a id="subsection_4"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#african-american-vs-asthma">African American (%) vs. Asthma<a id="subsection_5"></a></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#your-turn">Your Turn!!<a id="subsection_6"></a></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-factor-vs-health-outcome-single-regression">1. Environmental Factor vs. Health Outcome (Single Regression)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#race-vs-health-outcome-single-regression">2. % Race vs. Health Outcome (Single Regression)</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#part-iv-multiple-regression-putting-it-all-together">Part IV: Multiple Regression: putting it all together <a id="section_multreg"></a></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Your Turn!!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#peer-consulting-office-hours">Peer Consulting Office Hours<a id="section_pc"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feedback-form">Feedback Form!</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citations">Citations:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                            <p class="logo">
+                                
+                                    
+                                    <a href="intro.html"><img src="_static/light.svg" class="logo" alt="logo"></a>
+                                    
+                                
+                            </p>
+
+                            <p class="powered">Powered by <a href="https://jupyterbook.org/">Jupyter Book</a></p>
+
+                        </nav>
+
+                        <div class="qe-page__toc-footer">
+                            
+                            
+                            <p><a href="#top"><strong>Back to top</strong></a></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="qe-page__header">
+
+                    <div class="qe-page__header-copy">
+
+                        <p class="qe-page__header-heading"><a href="intro.html">Modules Showcase</a></p>
+
+                        <p class="qe-page__header-subheading">[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!</p>
+
+                    </div>
+                    <!-- length 2, since its a string and empty dict has length 2 - {} -->
+                        <p class="qe-page__header-authors" font-size="18">Jonathan Ferrari</p>
+
+
+                </div> <!-- .page__header -->
+
+
+
+                
+                <main class="qe-page__content" role="main">
+                    
+                    <div>
+                        
+  <div class="tex2jax_ignore mathjax_ignore section" id="espm-163ac-lab2-introduction-to-prediction-part-2">
+<h1>[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!<a class="headerlink" href="#espm-163ac-lab2-introduction-to-prediction-part-2" title="Permalink to this heading">#</a></h1>
+<p><em>Estimated Time: ~50 minutes</em></p>
+<p>One of the most important and interesting aspects of data science is making predictions about the future. Can we predict temperatures a few decades from now by analyzing historical data about climate change and pollution? Based on a person’s social media profile, what conclusions can we draw about their interests? How can we use a patient’s medical history to judge how well he or she will respond to a treatment?</p>
+<p>In last week’s lab, you learned a bunch of data science techniques to manipulate tables and make cool visualizations out of them. In lecture this week, we studied concepts of correlation and regression to make predictions in one outcome based on another factor (or factors). Today, we will be putting these skills together to study relationships between race, environmental factors, and health outcomes. Specifically, we will <strong>predict health outcomes (cardiovascular disease, asthma, etc.) based on an environmental factor and race</strong>. We will interpret the correlation coefficients and visualizations of predictions.</p>
+<p>You’ve already seen how all of this comes together in lecture this week. In this lab, we will revisit our example of <strong>the effect of race and air pollution on reported asthma rates</strong> and, in the end, have you follow our steps to run a prediction using a <strong>different</strong> set of variables and interpret the results.</p>
+<p>If you feel comfortable with the concepts we covered in lecture, feel free to skim through Part 1 (Review Section) and start on Part 2 (your own analysis)! If you need some reinforcement, don’t worry – carefully read Part 1 and follow along with the provided example (from lecture) as you do your own analysis.</p>
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">#</a></h2>
+<p><a class="reference internal" href="#section_data"><span class="xref myst">The Data</span></a></p>
+<p><a class="reference internal" href="#section_review"><span class="xref myst">Part I: Review</span></a></p>
+<p>       1 - <a class="reference internal" href="#subsection_1"><span class="xref myst">Correlation Coefficient</span></a></p>
+<p>       2 - <a class="reference internal" href="#subsection_2"><span class="xref myst">Linear Regression</span></a></p>
+<p>       3 - <a class="reference internal" href="#subsection_3"><span class="xref myst">Coefficient of Determination</span></a></p>
+<p><a class="reference internal" href="#section_linreg"><span class="xref myst">Part II: Simple Linear Regression</span></a></p>
+<p>       4 - <a class="reference internal" href="#subsection_4"><span class="xref myst">Pollution vs. Asthma</span></a></p>
+<p>       5 - <a class="reference internal" href="#subsection_5"><span class="xref myst">Hispanic % vs. Asthma</span></a></p>
+<p>       6 - <a class="reference internal" href="#subsection_6"><span class="xref myst">You Try!</span></a></p>
+<p><a class="reference internal" href="#section_multreg"><span class="xref myst">Part III: Multiple Regression!!</span></a></p>
+<p><a class="reference internal" href="#section_pc"><span class="xref myst">Peer Consulting Information</span></a></p>
+</div>
+<div class="section" id="let-s-get-started">
+<h2>Let’s get started!<a class="headerlink" href="#let-s-get-started" title="Permalink to this heading">#</a></h2>
+<p>Run the cell below to import the tools we’ll use in this notebook. Don’t worry about getting an output – simply run the cell!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">datascience</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ds</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plots</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">from</span><span class="w"> </span><span class="nn">mpl_toolkits.mplot3d</span><span class="w"> </span><span class="kn">import</span> <span class="n">Axes3D</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.formula.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sm</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">datascience</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ds</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;datascience&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="the-data">
+<h1>The Data <a id='section_data'></a><a class="headerlink" href="#the-data" title="Permalink to this heading">#</a></h1>
+<p>We will be using data from the website of the Office of Environmental Health Hazard Assessment. The file includes environmental and population data across different counties of California. In order to analyze the data, we must first import it to our Jupyter notebook and create a table. We will call this table <code class="docutils literal notranslate"><span class="pre">ces_data</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ces_data</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">Table</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s2">&quot;../data/ces_data.csv&quot;</span><span class="p">)</span>
+<span class="n">ces_data</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that a lot of the entries in the Pesticides column above are 0’s. When dealing with large datasets, we will often encounter <strong>missing</strong> values. These values are simply empty values that appear when we do not have a value available for a particular record. It is important to clean these meaningless values to carry out analysis of the dataset. Much of data science consists of <strong>cleaning data</strong> which includes <strong>renaming columns</strong>, <strong>reducing the table size to include only the columns of interest</strong>, and <strong>removing missing values</strong>.  There are various methods of dealing with missing values – for our purposes, it is safe to simply remove these values from our table.</p>
+<p><strong>We have done this for you</strong>: simply run the cell below to save a clean version of the data as <code class="docutils literal notranslate"><span class="pre">clean_ces_data</span></code>. From this point forward, we’ll use this cleaned CES data to run our analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clean_ces_data</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">Table</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s2">&quot;../data/cleaned_data_new.csv&quot;</span><span class="p">)</span>
+
+<span class="n">clean_ces_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since we removed some records, the <strong>clean_ces_data</strong> table would have fewer rows than the original. How many missing values were in our original table? Find out by comparing the lengths of the two tables!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">length_of_original</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ces_data</span><span class="p">)</span>
+<span class="n">length_of_cleaned</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">clean_ces_data</span><span class="p">)</span>
+<span class="n">difference</span> <span class="o">=</span> <span class="n">length_of_original</span> <span class="o">-</span> <span class="n">length_of_cleaned</span>
+
+<span class="n">difference</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="tex2jax_ignore mathjax_ignore section" id="part-i-review">
+<h1>Part I: Review<a id='section_review'></a><a class="headerlink" href="#part-i-review" title="Permalink to this heading">#</a></h1>
+<p>We’ll provide an overview of the concepts we covered in lecture. If you feel confident about the material on correlation (r), regression and coefficient of determination (r-squared), feel free to skip ahead! It is important to have a solid understanding of these concepts – they are at the heart of the later parts of this lab. Make sure to ask any questions you have to clarify these concepts so you can get the most out of this lab!</p>
+<p><strong>Resources:</strong></p>
+<ul class="simple">
+<li><p>If you need a more comprehensive review than what we offer here, we’ve attached <a class="reference external" href="https://tinyurl.com/y4ke2kv6">the lecture notebook here</a>.</p></li>
+<li><p>This lab utilized our Jupyter Notebook skills we developed last week in section. It’s a good idea to have the <a class="reference external" href="https://tinyurl.com/y4fru2ro">Introduction to Jupyter Notebook Lab</a> open for your reference throughout this lab.</p></li>
+</ul>
+<div class="section" id="the-correlation-coefficient-r">
+<h2>1. The correlation coefficient - r<a id='subsection_1'></a><a class="headerlink" href="#the-correlation-coefficient-r" title="Permalink to this heading">#</a></h2>
+<p>You came across this number last time in the lecture notebook. You already know that it’s just a number between -1 and 1 that tells you:</p>
+<ol class="arabic simple">
+<li><p><strong>What the relationship between two variables looks like</strong> and</p></li>
+<li><p><strong>How strong that relationship is</strong>.</p></li>
+</ol>
+<p><img alt="image" src="../images/correlation-examples.svg" /></p>
+<p>We defined functions that help us calculate the correlation coefficient in lecture. Don’t worry about how it is defined – simply run the cell below!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">standard_units</span><span class="p">(</span><span class="n">xyz</span><span class="p">):</span> <span class="c1">#helps us define the correlation function</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">xyz</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">xyz</span><span class="p">))</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">xyz</span><span class="p">)</span> 
+
+<span class="c1">#Finds the correlation between two columns of a table!</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">correlation</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">label_x</span><span class="p">,</span> <span class="n">label_y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">standard_units</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="n">label_x</span><span class="p">))</span><span class="o">*</span><span class="n">standard_units</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="n">label_y</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can use our <code class="docutils literal notranslate"><span class="pre">correlation()</span></code> function to calculate the correlation coeffient between any two variables in a table. Below is an example of how to use this: from the <code class="docutils literal notranslate"><span class="pre">clean_ces_data</span></code> table, we will use the <code class="docutils literal notranslate"><span class="pre">hispanic</span></code> and <code class="docutils literal notranslate"><span class="pre">asthma</span></code> columns to see the relationship between these two variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correlation</span><span class="p">(</span><span class="n">clean_ces_data</span><span class="p">,</span> <span class="s1">&#39;hispanic&#39;</span><span class="p">,</span> <span class="s1">&#39;asthma&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="interpreting-r">
+<h3>Interpreting r<a class="headerlink" href="#interpreting-r" title="Permalink to this heading">#</a></h3>
+<p>So, we get a correlation coefficient of <strong>0.359</strong> from our calculation. What does this value mean regarding the relationship between the concentration of hispanic people and the frequency of asthma attacks in a census tract?</p>
+<ul class="simple">
+<li><p>The value of the correlation coefficient is <strong>positive</strong>. This means that there is some sort of positive correlation between these variables: as the value of one variable increases, the other increases as well.</p></li>
+<li><p>We can infer that places with a higher proportion of Hispanics <strong>tend to have</strong> a higher number of reported asthma attacks.</p></li>
+<li><p>The value is not that close to 1 - we can only say that there is a <strong>weak</strong> positive relationship between the proportion of Hispanics and frequency of asthma attacks.</p></li>
+</ul>
+</div>
+<div class="section" id="you-try">
+<h3>You Try:<a class="headerlink" href="#you-try" title="Permalink to this heading">#</a></h3>
+<p>Pick a race of your choice and calculate the correlation coefficient with cardio vascular disease.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correlation</span><span class="p">(</span><span class="o">...</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question 2: Interpret this value:</strong></p>
+<p><em>Your Answer Here</em></p>
+</div>
+</div>
+<div class="section" id="prediction-using-simple-linear-regression">
+<h2>2. Prediction Using Simple Linear Regression<a id='subsection_2'></a><a class="headerlink" href="#prediction-using-simple-linear-regression" title="Permalink to this heading">#</a></h2>
+<p>Linear regression is really just a term for <strong>making predictions using lines</strong>. With two variables, linear regression is just a plain old line:</p>
+<div class="math notranslate nohighlight">
+\[Y = mX+b\]</div>
+<p><img alt="image" src="http://onlinestatbook.com/2/regression/graphics/gpa.jpg" /></p>
+<p>In the example above:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Y</span></code> is what you are predicting (e.g. University GPA) and</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">X</span></code> is what you are basing the prediction off of (e.g. High School GPA)</p></li>
+</ul>
+<p>So, all we need to make this line are two values:</p>
+<ul class="simple">
+<li><p>the slope (<code class="docutils literal notranslate"><span class="pre">m</span></code>) of the line and</p></li>
+<li><p>the intercept (<code class="docutils literal notranslate"><span class="pre">b</span></code>) of the line!</p></li>
+</ul>
+<p>If you recall from your algebra classes:</p>
+<ul class="simple">
+<li><p>the <strong>y-intercept</strong>  is just what the Y-value is expected to be when X = 0 (where the line crosses the y-axis), and</p></li>
+<li><p>the <strong>slope</strong> tells you how much the Y-value changes when the X-value changes.</p></li>
+</ul>
+<p>In other words, the <strong>slope</strong> is highly dependent on the <strong>relationship</strong> between X and Y – it is dependent on the <strong>the correlation coefficient</strong>.</p>
+<p>That’s right: <strong>we need the correlation coefficient in order to find the equation for the regression line.</strong></p>
+<p>You don’t need to know how any of the following functions are defined: we’ve given you everything you need to calculate the slope and intercept of the regression line – all you need to do is to <strong>run the cell below</strong>, and we will show you how to use the functions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">standard_units</span><span class="p">(</span><span class="n">xyz</span><span class="p">):</span> <span class="c1">#ignore this function!</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">xyz</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">xyz</span><span class="p">))</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">xyz</span><span class="p">)</span> 
+
+<span class="k">def</span><span class="w"> </span><span class="nf">correlation</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">label_x</span><span class="p">,</span> <span class="n">label_y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">standard_units</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="n">label_x</span><span class="p">))</span><span class="o">*</span><span class="n">standard_units</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="n">label_y</span><span class="p">)))</span>
+
+<span class="c1"># We use these function to construct the regression line. As you can see, correlation is used to </span>
+<span class="c1"># evaluate the slope of the regression line below.</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">slope</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">label_x</span><span class="p">,</span> <span class="n">label_y</span><span class="p">):</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">correlation</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">label_x</span><span class="p">,</span> <span class="n">label_y</span><span class="p">)</span> <span class="c1"># correlation function used in slope!</span>
+    <span class="k">return</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="n">label_y</span><span class="p">))</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="n">label_x</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">intercept</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">label_x</span><span class="p">,</span> <span class="n">label_y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="n">label_y</span><span class="p">))</span> <span class="o">-</span> <span class="n">slope</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">label_x</span><span class="p">,</span> <span class="n">label_y</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="n">label_x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Suppose we want to find the equation of the regression line for the variables in the previous section - Race &amp; Disease. We pick the same example again - Hispanic &amp; Asthma.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slope_of_reg_line</span> <span class="o">=</span> <span class="n">slope</span><span class="p">(</span><span class="n">clean_ces_data</span><span class="p">,</span> <span class="s2">&quot;hispanic&quot;</span><span class="p">,</span> <span class="s2">&quot;asthma&quot;</span><span class="p">)</span>
+<span class="n">slope_of_reg_line</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">intercept_of_reg_line</span> <span class="o">=</span> <span class="n">intercept</span><span class="p">(</span><span class="n">clean_ces_data</span><span class="p">,</span> <span class="s2">&quot;hispanic&quot;</span><span class="p">,</span> <span class="s2">&quot;asthma&quot;</span><span class="p">)</span>
+<span class="n">intercept_of_reg_line</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question:</strong> Now we have the slope (m) and the interceipt (b) of the the regression line. Given the values we just calculated above, what is the equation of the regression line?</p>
+<p><em>YOUR ANSWER HERE</em></p>
+<p>Now that we have the regression line, we can <strong>plot it over our scatter plot</strong> to visualize the prediction line on top of the actual data. The code cell below takes our slope and intercept, creates the function above (don’t worry about how it is implemented). We can use this function to draw the regression line on top of our scatter plot!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># defining the equation in Python!</span>
+<span class="n">y</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">slope_of_reg_line</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">intercept_of_reg_line</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clean_ces_data</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;hispanic&quot;</span><span class="p">,</span> <span class="s2">&quot;asthma&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">.16</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="c1">#normal scatter plot</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">clean_ces_data</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;hispanic&#39;</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="n">clean_ces_data</span><span class="o">.</span><span class="n">column</span><span class="p">(</span><span class="s1">&#39;hispanic&#39;</span><span class="p">)),</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">lw</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span> <span class="c1">#drawing the regression line</span>
+<span class="n">plots</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Y = 0.4122*X + 37.19&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The gold line above is the equation of the line you derived: <span style='color: orange'><span class="math notranslate nohighlight">\(Y = 0.4122*X + 37.19\)</span></span>. Amazingly, this simple line created by the equation in yellow is the <strong>best</strong> linear predictor of the data: out of all the infinitely many possible combinations of slopes and intercepts, the one we get from our functions predicts our data the best. If you know that a census tract is 80% hispanic, how many incidents of asthma would you guess that census tract to report? What if a census tract is 20% hispanic?</p>
+<p>Conveniently, the <code class="docutils literal notranslate"><span class="pre">.scatter()</span></code> function has a setting that allows us to draw the regression line within the scatterplot (without doing any calculations!): all we do is to specify <code class="docutils literal notranslate"><span class="pre">fit_line</span> <span class="pre">=</span> <span class="pre">True</span></code>. Run the cell below and compare it to the plot above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clean_ces_data</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;hispanic&quot;</span><span class="p">,</span> <span class="s2">&quot;asthma&quot;</span><span class="p">,</span> <span class="n">fit_line</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">.16</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="coefficient-of-determination-r-squared">
+<h2>3. Coefficient of Determination (R-Squared)<a id='subsection_3'></a><a class="headerlink" href="#coefficient-of-determination-r-squared" title="Permalink to this heading">#</a></h2>
+<div class="section" id="how-good-is-our-predictive-model">
+<h3>How Good is our Predictive Model?<a class="headerlink" href="#how-good-is-our-predictive-model" title="Permalink to this heading">#</a></h3>
+<p>We know the following:</p>
+<ul class="simple">
+<li><p>How to assess the relationship between two variables (correlation coefficient)</p></li>
+<li><p>How to find the linear regression equation and use it to make <strong>predictions</strong></p></li>
+</ul>
+<p>But what if we want to assess how <strong>effective</strong> our linear regression model is? In other words, how do we evaluate how “good” our prediction is?</p>
+<p>That is where the <strong>Coefficient of Determination</strong>, also called <strong>r-squared</strong>, comes in. It helps us assess the effectiveness of our predictive model and, more importantly, allows us to <strong>compare</strong> the effectiveness amongst various predictive models.</p>
+<p>Here is all you need to know about <strong>r-squared</strong>:</p>
+<div class="alert alert-info">
+It's a number ranging from <b>0 to 1</b> that tells you how well the model predicts the outcome: 1 is a perfect prediction (if you know the X-value, you definitely know the Y-Value) while 0 is a terrible prediction (you might as well randomly guess!)
+</div>
+<p><em>Side Note:</em>
+It’s called <strong>r-squared</strong> because in simple linear regression, the <strong>Coefficient of Determination</strong> is just the <strong>square of the Correlation Coefficient r</strong>. However, when we get to Multiple Regression (where we use <em>TWO</em> X variables to predict a Y variable for a total of 3 variables), we can’t just rely on the relationship between <strong>two</strong> variables to evaluate the effectiveness of the model because the model can use <strong>three</strong> (or more!) variables. So, using r-squared allows us to compare model performance between any type of regression model!</p>
+<p>For this lab, you are only responsible for <strong>interpreting</strong> the r-squared value.</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="tex2jax_ignore mathjax_ignore section" id="part-ii-simple-linear-regression-from-lecture">
+<h1>Part II: Simple Linear Regression  (from lecture)<a id='section_linreg'></a><a class="headerlink" href="#part-ii-simple-linear-regression-from-lecture" title="Permalink to this heading">#</a></h1>
+<p>This section should be very familiar to you – it’s our example analysis from lecture! The goal of this lab is for you to use the tools we’ve shown you to conduct your own analysis of variables of your choice. Our focus is not on calculation but on the <strong>interpretation</strong> of graphs and analysis tools (r and r-squared); while you go through these examples, keep in mind the overarching question: <strong>do environmental factors disproportionately affect the health outcomes of minority groups?</strong></p>
+<div class="section" id="pollution-score-vs-asthma">
+<h2>Pollution Score vs. Asthma<a id='subsection_4'></a><a class="headerlink" href="#pollution-score-vs-asthma" title="Permalink to this heading">#</a></h2>
+<p>Let’s begin by analyzing the relationship between the pollution score of a census tract and the prevalence of asthma. The following graph shows a scatter plot between pollution score and asthma: each dot represents a census tract. At first, we will just look at the relationship (correlation: r) between pollution and asthma. Then we will draw a regression line over it and assess its effectiveness (r-squared).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;r: &#39;</span><span class="p">,</span> <span class="n">correlation</span><span class="p">(</span><span class="n">clean_ces_data</span><span class="p">,</span> <span class="s1">&#39;ces_pollution_score&#39;</span><span class="p">,</span> <span class="s1">&#39;asthma&#39;</span><span class="p">))</span>
+<span class="n">clean_ces_data</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;ces_pollution_score&quot;</span><span class="p">,</span> <span class="s2">&quot;asthma&quot;</span><span class="p">,</span> <span class="n">fit_line</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">.18</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">correlation</span></code> function we defined above, we calculate the correlation coefficient (printed above the graph).</p>
+<p><strong>Question:</strong> What does this correlation value tell us about the relationship between pollution score and asthma prevalance?</p>
+<p><em>Your Answer Here</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;r-squared: &#39;</span><span class="p">,</span> <span class="n">correlation</span><span class="p">(</span><span class="n">clean_ces_data</span><span class="p">,</span> <span class="s1">&#39;ces_pollution_score&#39;</span><span class="p">,</span> <span class="s1">&#39;asthma&#39;</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">clean_ces_data</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;ces_pollution_score&quot;</span><span class="p">,</span> <span class="s2">&quot;asthma&quot;</span><span class="p">,</span> <span class="n">fit_line</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">.18</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>correlation coefficient:</strong></p>
+<p>As we would assume, pollution score is correlated with asthma. But <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">0.545</span></code> isn’t a very strong relationship. Why? Think back to the example when <code class="docutils literal notranslate"><span class="pre">r</span></code> is nearly perfect: all the points in the scatter plot were almost in a perfect straight line. Does the above look like a near perfect straight line?</p>
+<p>No. Even though this plot is clearly exhibiting a positive relationship between the two variables, the scatter plot sprays out: for a given pollution score, there is a pretty wide range of possible asthma occurences. So, while we know that an increase in pollution score tends to increase the number of asthma attacks, we can’t predict with much confidence exactly how many attacks there might be.</p>
+<p>The regression line is drawn over the scatter plot to show the best “guess” for asthma prevalence given a particular pollution score.</p>
+<p><strong>r-squared:</strong></p>
+<p>Now looking at the regression line, how can we assess how predictive our model (line) actually is? We turn to <code class="docutils literal notranslate"><span class="pre">r-squared</span></code>, a metric we use to measure how well the prediction line fits in with the scatter plot.</p>
+<p>Take a look at when the pollution score is equal to 40, for example. The regression line predicts somewhere around 60 asthma incidents, but there have been as many as 200 incidents in several census tracts and as few as 20 in others. In other words, the data is super spread out and not centered around the prediction line. <strong>Knowing the pollution score, therefore, doen’t give us very much power to predict Asthma.</strong> This is what the r-squared tells us: it helps us assess the effectiveness of our predictive model.</p>
+<p>Run the cell below to find the value of r-squared for the above plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;asthma ~ ces_pollution_score&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">clean_ces_data</span><span class="p">)</span>
+<span class="n">fit</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">fit</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">.5452</span><span class="o">*</span><span class="mf">.5452</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We get that <code class="docutils literal notranslate"><span class="pre">r-squared</span> <span class="pre">=</span> <span class="pre">0.297</span></code>. Recall that r-squared, similarly to the correlation coefficient, is a number between 0 and 1, where 1 indicates the model produces a perfect prediction, and 0 indicates that you’re just as well off taking a wild guess. Notice also that:</p>
+<p><span class="math notranslate nohighlight">\(r\_squared = 0.297 = 0.5452^2 = (correlation\_coefficient)^2\)</span></p>
+<p>In <strong>simple</strong> linear regression, the <code class="docutils literal notranslate"><span class="pre">r-squared</span></code> metric is simply the square of the correlation coefficient! So why use <code class="docutils literal notranslate"><span class="pre">r-squared</span></code> when we already know <code class="docutils literal notranslate"><span class="pre">r</span></code>? Because <code class="docutils literal notranslate"><span class="pre">r</span></code> helps us understand the relationship between two variables, but once we start looking at 3 or more variables at a time we must turn to another metric: the <code class="docutils literal notranslate"><span class="pre">r-squared</span></code>. In fact, <code class="docutils literal notranslate"><span class="pre">r-squared</span></code> is often called the Multiple Correlation Coefficient (the correlation coefficient between multiple variables). It allows us to compare prediction results even if we don’t use the same number of variables. We’ll come back to this in the last section on Multiple Regression.</p>
+</div>
+<div class="section" id="african-american-vs-asthma">
+<h2>African American (%) vs. Asthma<a id='subsection_5'></a><a class="headerlink" href="#african-american-vs-asthma" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;r: &#39;</span><span class="p">,</span> <span class="n">correlation</span><span class="p">(</span><span class="n">clean_ces_data</span><span class="p">,</span> <span class="s1">&#39;african_american&#39;</span><span class="p">,</span> <span class="s1">&#39;asthma&#39;</span><span class="p">))</span>
+<span class="n">clean_ces_data</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;african_american&quot;</span><span class="p">,</span> <span class="s2">&quot;asthma&quot;</span><span class="p">,</span> <span class="n">fit_line</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">.18</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;asthma ~ african_american&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">clean_ces_data</span><span class="p">)</span>
+<span class="n">fit</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">fit</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question:</strong></p>
+<ul class="simple">
+<li><p>Interpret your correlation coefficient</p></li>
+<li><p>Interpret your graph – do you notice anything interesting?</p></li>
+<li><p>Interpret the r-squared value</p></li>
+</ul>
+<p><em>Your Answer Here:</em></p>
+<ul class="simple">
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="tex2jax_ignore mathjax_ignore section" id="your-turn">
+<h1>Your Turn!!<a id='subsection_6'></a><a class="headerlink" href="#your-turn" title="Permalink to this heading">#</a></h1>
+<p>Run the cell below to look at all the possible variables available to you to choose from. From this table, choose <strong>one</strong> Health Outcome variable (this will be your Y variable), <strong>one</strong> Environmental Factor Variable, and <strong>one</strong> Race (%) variable. Conduct Simple Regression Analysis of Health Outcome and each of the other two variables, just as we did in the example above.</p>
+<p><em>Note in the table below that you can scroll to the right to see all the columns.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clean_ces_data</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="environmental-factor-vs-health-outcome-single-regression">
+<h2>1. Environmental Factor vs. Health Outcome (Single Regression)<a class="headerlink" href="#environmental-factor-vs-health-outcome-single-regression" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate your the correlation coefficient here</span>
+<span class="n">correlation</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot your scatter plot and regression line here</span>
+<span class="n">clean_ces_data</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">fit_line</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">.18</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fill in the ...</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;...&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="o">...</span><span class="p">)</span>
+<span class="n">fit</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">fit</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question:</strong></p>
+<ul class="simple">
+<li><p>Interpret your correlation coefficient</p></li>
+<li><p>Interpret your graph – do you notice anything interesting?</p></li>
+<li><p>Interpret the r-squared</p></li>
+</ul>
+<p><em>Your Answer Here:</em></p>
+<ul class="simple">
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+<div class="section" id="race-vs-health-outcome-single-regression">
+<h2>2. % Race vs. Health Outcome (Single Regression)<a class="headerlink" href="#race-vs-health-outcome-single-regression" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate your the correlation coefficient here</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot your scatter plot and regression line here</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fill in the ...</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;...&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="o">...</span><span class="p">)</span>
+<span class="n">fit</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">fit</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question:</strong></p>
+<ul class="simple">
+<li><p>Interpret your correlation coefficient</p></li>
+<li><p>Interpret your graph – do you notice anything interesting?</p></li>
+<li><p>Interpret the r-squared</p></li>
+</ul>
+<p><em>Your Answer Here:</em></p>
+<ul class="simple">
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<p>So you see that linear regression of two variables (X and Y) is really just a line that goes through the scatter plot in a way that gives us the best estimate of what the Y value might be given an X value. If we are told that a Census Tract is made up 100% of Hispanics, looking at the plot above our prediction of frequency of Asthma attacks for that Census tract would be about 75; if we are told that a Census Tract has 0% Hispanics, our prediction would be a little less than 50. This is what the regression line allows us to do – it allows us to see how one variable (X, i.e. % Hispanic) affects another variable (Y, i.e. number of asthma attacks), what the magnitude of this effect is, and, ultimately, it allows us to make predictions based on what we know about X.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="tex2jax_ignore mathjax_ignore section" id="part-iv-multiple-regression-putting-it-all-together">
+<h1>Part IV: Multiple Regression: putting it all together <a id='section_multreg'></a><a class="headerlink" href="#part-iv-multiple-regression-putting-it-all-together" title="Permalink to this heading">#</a></h1>
+<p>Regression isn’t limited to just two variables! We saw above that we predicted a <code class="docutils literal notranslate"><span class="pre">Y</span></code> variable based on just one <code class="docutils literal notranslate"><span class="pre">X</span></code> variable. As the name suggests, <strong>Multiple</strong> regression allows us to use more than one <code class="docutils literal notranslate"><span class="pre">X</span></code> variable to predict an outcome. If you know the age of a patient for example, that alone can help predict health outcomes like whether they have cancer: a teenager is less likely to have lung cancer than a 70 year old. But if you had more information on patients, like how many packs of cigarettes they smoke a week, you can imagine that our prediction will be more accurate since it is not solely dependent on age.</p>
+<p>This is the idea behind Multiple Regression. In the last section, we explored how frequency of asthma attacks in census tracts is related to the proportion of Hispanics in the census tract and, separately, the pollution burden score. We saw that the <code class="docutils literal notranslate"><span class="pre">r-squared</span></code> values for both of these relationships were <code class="docutils literal notranslate"><span class="pre">0.247</span></code> and <code class="docutils literal notranslate"><span class="pre">0.249</span></code>, respectively (pretty bad). In this section, we’ll explore how the <strong>combination</strong> of these two variables helps to more accurately predict Asthma attacks.</p>
+<ul class="simple">
+<li><p>In <em>single</em> regression, our regression line was in the form: <span class="math notranslate nohighlight">\(Y = slope*X + intercept\)</span></p></li>
+<li><p>In <em>multiple</em> regression, our regression **”line” is defined very similarly as: <span class="math notranslate nohighlight">\(Y = slope1*X_1 + slope2*X_2 + intercept\)</span></p></li>
+</ul>
+<p>**You’ll understand why “line” is in quotes when you see the multiple regression plot.</p>
+<p>The slopes and intercept are calculated very similarly to what you saw before in single regression, but don’t worry about the math behind this – we’ll just focus on how to <strong>interpret</strong> the predictive power of multipe regression as well as the 3-dimensional (!!) visualization of the regression plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#this line makes the plot below interactive! You can slowly move the graph around to see from different angles.</span>
+<span class="o">%</span><span class="k">matplotlib</span> notebook
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s1">&#39;asthma ~ african_american + ces_pollution_score&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">clean_ces_data</span><span class="p">)</span>
+<span class="n">fit</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plots</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+
+<span class="n">x_surf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>                <span class="c1"># generate a mesh</span>
+<span class="n">y_surf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">x_surf</span><span class="p">,</span> <span class="n">y_surf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_surf</span><span class="p">,</span> <span class="n">y_surf</span><span class="p">)</span>
+
+<span class="n">exog</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;african_american&#39;</span><span class="p">:</span> <span class="n">x_surf</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="s1">&#39;ces_pollution_score&#39;</span><span class="p">:</span> <span class="n">y_surf</span><span class="o">.</span><span class="n">ravel</span><span class="p">()})</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">fit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">exog</span> <span class="o">=</span> <span class="n">exog</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">x_surf</span><span class="p">,</span> <span class="n">y_surf</span><span class="p">,</span>
+                <span class="n">out</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">x_surf</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span>
+                <span class="n">rstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                <span class="n">cstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span>
+                <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.15</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">clean_ces_data</span><span class="p">[</span><span class="s1">&#39;african_american&#39;</span><span class="p">],</span> <span class="n">clean_ces_data</span><span class="p">[</span><span class="s1">&#39;ces_pollution_score&#39;</span><span class="p">],</span> <span class="n">clean_ces_data</span><span class="p">[</span><span class="s1">&#39;asthma&#39;</span><span class="p">],</span>
+           <span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span>
+           <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+           <span class="n">alpha</span><span class="o">=</span><span class="mf">.15</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;african_american&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;ces_pollution_score&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;asthma&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Effect of Census % African American and Pollution on Asthma Attacks&#39;</span><span class="p">)</span>
+
+<span class="n">plots</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fit</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What do you notice about the R-Squared for multiple regression?</p>
+<p>It’s a little higher! 0.424 is still not the best, but it’s certainly better than ~0.25. We see that the combination of pollution score <strong>and</strong> African American composition predicts the number of asthma attacks better than either of the individual simple regressions.</p>
+<p><strong>The Big Picture</strong></p>
+<p>Let’s think about this for a moment. We saw that pollution score by itself does not predict asthma well, and knowing the percent composition of African Americans by itself does not predict asthma well. But, our multiple regression analysis shows that the <strong>combination</strong> of the pollution score and African American composition predicts asthma a lot better: a <strong>higher</strong> pollution score and a <strong>higher</strong> composition of African Americans in a census tract tends to result in a <strong>higher</strong> incidence of asthma. We might infer, then, that pollution more negatively affects African American communities than White communities. Perhaps environmental factors do disproportionately affect African American communities after all.</p>
+<div class="section" id="id1">
+<h2>Your Turn!!<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>Recall that in the previous section on Single Linear Regression, you analyzed the relationship between a ethnicity variable and a health outcome variable, and an environmental factor variable and the same health outcome variable.</p>
+<p>Using the <strong>same</strong> variables you chose above, interpret now a multiple regression of these variables. No need to code anything here: simply save the column names as variables below in the following format:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(y\)</span>: your <strong>health outcome</strong> variable</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_1\)</span>: your <strong>ethnicity</strong> variable</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_2\)</span>: your <strong>environmental factor</strong> variable</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># input your previously chosen variables</span>
+<span class="c1">#EXAMPLE</span>
+<span class="n">y_variable</span> <span class="o">=</span> <span class="s1">&#39;asthma&#39;</span>
+<span class="n">x1_variable</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
+<span class="n">x2_variable</span> <span class="o">=</span> <span class="s1">&#39;ces_pollution_score&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># input your previously chosen variables</span>
+<span class="n">y_variable</span> <span class="o">=</span> <span class="s1">&#39;...&#39;</span>
+<span class="n">x1_variable</span> <span class="o">=</span> <span class="s1">&#39;...&#39;</span>
+<span class="n">x2_variable</span> <span class="o">=</span> <span class="s1">&#39;...&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Now simply run this cell below to see your plot!</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### DO NOT CHANGE ###</span>
+<span class="o">%</span><span class="k">matplotlib</span> notebook
+
+<span class="n">eqn</span> <span class="o">=</span> <span class="n">y_variable</span> <span class="o">+</span> <span class="s1">&#39; ~ &#39;</span> <span class="o">+</span> <span class="n">x1_variable</span> <span class="o">+</span> <span class="s1">&#39; + &#39;</span> <span class="o">+</span> <span class="n">x2_variable</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span> <span class="n">eqn</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">clean_ces_data</span><span class="p">)</span>
+<span class="n">fit</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plots</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+
+<span class="n">x_surf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>                <span class="c1"># generate a mesh</span>
+<span class="n">y_surf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">x_surf</span><span class="p">,</span> <span class="n">y_surf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_surf</span><span class="p">,</span> <span class="n">y_surf</span><span class="p">)</span>
+
+<span class="n">exog</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="n">x1_variable</span><span class="p">:</span> <span class="n">x_surf</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">x2_variable</span><span class="p">:</span> <span class="n">y_surf</span><span class="o">.</span><span class="n">ravel</span><span class="p">()})</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">fit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">exog</span> <span class="o">=</span> <span class="n">exog</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">x_surf</span><span class="p">,</span> <span class="n">y_surf</span><span class="p">,</span>
+                <span class="n">out</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">x_surf</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span>
+                <span class="n">rstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                <span class="n">cstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="s1">&#39;None&#39;</span><span class="p">,</span>
+                <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.15</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">clean_ces_data</span><span class="p">[</span><span class="n">x1_variable</span><span class="p">],</span> <span class="n">clean_ces_data</span><span class="p">[</span><span class="n">x2_variable</span><span class="p">],</span> <span class="n">clean_ces_data</span><span class="p">[</span><span class="n">y_variable</span><span class="p">],</span>
+           <span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span>
+           <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span>
+           <span class="n">alpha</span><span class="o">=</span><span class="mf">.15</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">x1_variable</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">x2_variable</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="n">y_variable</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Effect of &#39;</span> <span class="o">+</span> <span class="n">x1_variable</span> <span class="o">+</span> <span class="s1">&#39; and &#39;</span> <span class="o">+</span>  <span class="n">x2_variable</span> <span class="o">+</span> <span class="s1">&#39; on &#39;</span> <span class="o">+</span> <span class="n">y_variable</span><span class="p">)</span>
+
+<span class="n">plots</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run this cell to find the R-Squared value for your graph!</span>
+<span class="n">fit</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Interpret this graph!</strong> In the Markdown Cell below, answer the following questions:</p>
+<ol class="arabic simple">
+<li><p>What do you see in the graph above? Does it look like a combination of the <code class="docutils literal notranslate"><span class="pre">x_1</span></code> and <code class="docutils literal notranslate"><span class="pre">x_2</span></code> variables helps to predict your <code class="docutils literal notranslate"><span class="pre">y</span></code> variable?</p></li>
+<li><p>How does the resulting R-square of this multiple regression plot compare to your the two single regression R-square values you got earlier?</p></li>
+<li><p>Does your answer to question 2 support your anwswer to question 1? How so?</p></li>
+</ol>
+<p><em>YOUR ANSWER:</em></p>
+<ol class="arabic simple">
+<li><p>…</p></li>
+<li><p>…</p></li>
+<li><p>…</p></li>
+</ol>
+<p><strong>Your Take on the Big Picture:</strong></p>
+<p><em>Your answer here</em></p>
+<p><strong>CONGRATULATIONS!!</strong> In the past two weeks, you learned the fundamentals of Jupyter Notebook and Python, practiced manipulating tables, explored concepts of statistics like correlation and linear regression, and applied all of the above to study the effect of race and environmental factors on health outcomes. Phew! This concludes the interactive data exploration segment of the course.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="peer-consulting-office-hours">
+<h2>Peer Consulting Office Hours<a id='section_pc'></a><a class="headerlink" href="#peer-consulting-office-hours" title="Permalink to this heading">#</a></h2>
+<p>If you had trouble with any content in this notebook or if you’d like to know more about data enabled courses at Berkeley, Data Peer Consultants are here to help! You can check for availability of Peer Consultants on the <strong>third floor of Moffitt library</strong> (directly across from the entrance) with this detailed <a class="reference external" href="https://data.berkeley.edu/education/peer-consulting">Office Hours schedule</a>. Peer Consultants are there to answer all data-related questions, whether it be about the content of this notebook, applications of data science in the world or other data science courses offered at Berkeley – make sure to take advantage of this wonderful resource!</p>
+</div>
+<div class="section" id="feedback-form">
+<h2>Feedback Form!<a class="headerlink" href="#feedback-form" title="Permalink to this heading">#</a></h2>
+<p>We’d love to get your feedback! <strong>Please <a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSeNqihorZpaqKZPEUfGp45llXEqliSK9-mNGf4qJCwb4MapAw/viewform">take this short survey</a> to help us make module experience better for future courses!</strong></p>
+<div class="section" id="citations">
+<h3>Citations:<a class="headerlink" href="#citations" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/ds-modules">DS Modules</a></p></li>
+<li><p>Pierce, Rod. “Correlation” Math Is Fun. Ed. Rod Pierce. 5 Nov 2018. 16 Feb 2019 <a class="reference external" href="http://www.mathsisfun.com/data/correlation.html">http://www.mathsisfun.com/data/correlation.html</a></p></li>
+<li><p>Regression Image: Online Statistics Education: A Multimedia Course of Study (<a class="reference external" href="http://onlinestatbook.com/">http://onlinestatbook.com/</a>)</p></li>
+</ul>
+<p><em>Notebook developed by: Aarish Irfan and Keiko Kamei</em></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                    </div>
+                    
+                </main> <!-- .page__content -->
+                
+
+
+                <footer class="qe-page__footer">
+
+                    <p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://licensebuttons.net/l/by-sa/4.0/80x15.png"></a></p>
+
+                    <p>Creative Commons License &ndash; This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International.</p>
+
+                </footer> <!-- .page__footer -->
+
+            </div> <!-- .page -->
+
+            
+
+            
+            <div class="qe-sidebar bd-sidebar inactive" id="site-navigation">
+
+                <div class="qe-sidebar__header">
+
+
+                    Contents
+
+                </div>
+
+                <nav class="qe-sidebar__nav" id="qe-sidebar-nav" aria-label="Main navigation">
+                    <ul class="nav bd-sidenav nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav nav sidenav_l1">
+ <li class="toctree-l1 current active active">
+  <a class="current reference internal" href="#">
+   [ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!
+  </a>
+ </li>
+</ul>
+
+                </nav>
+
+                <div class="qe-sidebar__footer">
+
+                </div>
+
+            </div> <!-- .sidebar -->
+            
+        </div> <!-- .main -->
+
+        <div class="qe-toolbar">
+
+            <div class="qe-toolbar__inner">
+
+                <ul class="qe-toolbar__main">
+                    <li data-tippy-content="Table of Contents" class="btn__sidebar"><i data-feather="menu"></i></li>
+                    <li data-tippy-content="Home"><a href="intro.html"><i data-feather="home"></i></a></li>
+                    <li class="btn__qelogo"><a href="" title=""><span class="show-for-sr"></span></a></li>
+                </ul>
+
+                <ul class="qe-toolbar__links">
+                    <li class="btn__search">
+                        <form action="search.html" method="get">
+                            <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" accesskey="k">
+                            <i data-feather="search" id="search-icon"></i>
+                        </form>
+                    </li>
+                    <li data-tippy-content="Fullscreen" class="btn__fullscreen"><i data-feather="maximize"></i></li>
+                    <li data-tippy-content="Increase font size" class="btn__plus"><i data-feather="plus-circle"></i></li>
+                    <li data-tippy-content="Decrease font size" class="btn__minus"><i data-feather="minus-circle"></i></li>
+                    <li data-tippy-content="Change contrast" class="btn__contrast"><i data-feather="sunset"></i></li>
+                        <li data-tippy-content="Download PDF" onClick="window.print()"><i data-feather="file"></i></li>
+                    <!--
+                    # Enable if looking for link to specific document hosted on GitHub
+                    <li data-tippy-content="View Source"><a target="_blank" href="https://github.com/cal-icor/textbook/blob/main/modules/espm-regression.md" download><i data-feather="github"></i></a></li>
+                    -->
+                    <li data-tippy-content="View Source"><a target="_blank" href="https://github.com/cal-icor/textbook" download><i data-feather="github"></i></a></li>
+                </ul>
+
+            </div>
+
+        </div> <!-- .toolbar -->
+        <div id="downloadPDFModal" style="display: none;">
+            <ul class="pdf-options" style="display: block;">
+                <li class="download-pdf-book" onClick="window.print()">
+                    <p>Lecture (PDF)</p>
+                </li>
+                <li class="download-pdf-file">
+                    <a href="" download><p>Book (PDF)</p></a>
+                </li>
+            </ul>
+        </div>
+        <div id="settingsModal" style="display: none;">
+            <p class="modal-title"> Notebook Launcher </p>
+            <div class="modal-desc">
+            <p>
+                Choose public or private cloud service for "Launch" button.
+            </p>
+            </div>
+            <p class="modal-subtitle">Select a server</p>
+            <ul class="modal-servers">
+            <li class="active launcher-public">
+                <span class="label">Public</span>
+                <select id="launcher-public-input">
+                
+                </select>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="launcher-private">
+                <span class="label">Private</span>
+                <input type="text" id="launcher-private-input" data-repourl="" data-urlpath="" data-branch=>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            </ul>
+            <p class="launch"><a href="" id="advancedLaunchButton" target="_blank">Launch Notebook</a></p>
+            <script>
+                // QuantEcon Notebook Launcher
+                const launcherTypeElements = document.querySelectorAll('#settingsModal .modal-servers li');
+                // Highlight the server type if previous selection exists
+                if (typeof localStorage.launcherType !== 'undefined') {
+                  for (var i = 0; i < launcherTypeElements.length; i++) {
+                    launcherTypeElements[i].classList.remove('active');
+                    if ( launcherTypeElements[i].classList.contains(localStorage.launcherType) ) {
+                      launcherTypeElements[i].classList.add('active');
+                    }
+                  }
+                }
+                // Highlight server type on click and set local storage value
+                for (var i = 0; i < launcherTypeElements.length; i++) {
+                  launcherTypeElements[i].addEventListener('click', function() {
+                    for (var j = 0; j < launcherTypeElements.length; j++) {
+                      launcherTypeElements[j].classList.remove('active');
+                    }
+                    this.classList.add('active');
+                    if ( this.classList.contains('launcher-private') ) {
+                      localStorage.launcherType = 'launcher-private';
+                    } else if ( this.classList.contains('launcher-public') ) {
+                      localStorage.launcherType = 'launcher-public';
+                    }
+                    setLaunchServer();
+                  })
+                }
+                const launcherPublic = document.getElementById('launcher-public-input');
+                const launcherPrivate = document.getElementById('launcher-private-input');
+                const pageName = "espm-regression";
+                const repoURL = "";
+                const urlPath = "";
+                const branch = ""
+                const launchNotebookLink = document.getElementById('advancedLaunchButton');
+
+                // Highlight public server option if previous selection exists
+                if (typeof localStorage.launcherPublic !== 'undefined') {
+                  launcherPublic.value = localStorage.launcherPublic;
+                }
+                // Update local storage upon public server selection
+                launcherPublic.addEventListener('change', (event) => {
+                  setLaunchServer();
+                });
+                // Populate private server input if previous entry exists
+                if (typeof localStorage.launcherPrivate !== 'undefined') {
+                  launcherPrivate.value = localStorage.launcherPrivate;
+                }
+                // Update local storage when a private server is entered
+                launcherPrivate.addEventListener('input', (event) => {
+                  setLaunchServer();
+                });
+
+                // Function to update the "Launch Notebook" link href
+                function setLaunchServer() {
+                  launchNotebookLink.removeAttribute("style")
+                  if ( localStorage.launcherType == 'launcher-private' ) {
+                    let repoPrefix = "/jupyter/hub/user-redirect/git-pull?repo=" + repoURL + "&branch=" + branch + "&urlpath=" + urlPath;
+                    launcherPrivateValue = launcherPrivate.value
+                    if (!launcherPrivateValue) {
+                        launchNotebookLink.removeAttribute("href")
+                        launchNotebookLink.style.background = "grey"
+                        return
+                    }
+                    localStorage.launcherPrivate = launcherPrivateValue;
+                    privateServer = localStorage.launcherPrivate.replace(/\/$/, "")
+                    if (!privateServer.includes("http")) {
+                        privateServer = "http://" + privateServer
+                    }
+                    launchNotebookLinkURL = privateServer + repoPrefix;
+                  } else if ( localStorage.launcherType == 'launcher-public' ) {
+                    launcherPublicValue = launcherPublic.options[launcherPublic.selectedIndex].value;
+                    localStorage.launcherPublic = launcherPublicValue;
+                    launchNotebookLinkURL = localStorage.launcherPublic;
+                  }
+                  if (launchNotebookLinkURL) launchNotebookLink.href = launchNotebookLinkURL;
+                }
+                // Check if user has previously selected a server
+                if ( (typeof localStorage.launcherPrivate !== 'undefined') || (typeof localStorage.launcherPublic !== 'undefined') ) {
+                  setLaunchServer();
+                }
+                </script>
+
+        </div>
+
+    </div> <!-- .wrapper-->
+  </body>
+</html>
