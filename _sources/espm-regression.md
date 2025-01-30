@@ -72,7 +72,7 @@ import statsmodels.formula.api as sm
 We will be using data from the website of the Office of Environmental Health Hazard Assessment. The file includes environmental and population data across different counties of California. In order to analyze the data, we must first import it to our Jupyter notebook and create a table. We will call this table `ces_data`.
 
 ```{code-cell} ipython3
-ces_data = ds.Table.read_table("../data/ces_data.csv")
+ces_data = ds.Table.read_table("https://cal-icor.github.io/textbook.data/espm-163/ces.csv")
 ces_data.take(np.arange(40,50))
 ```
 
@@ -81,7 +81,7 @@ Notice that a lot of the entries in the Pesticides column above are 0's. When de
 **We have done this for you**: simply run the cell below to save a clean version of the data as `clean_ces_data`. From this point forward, we'll use this cleaned CES data to run our analysis.
 
 ```{code-cell} ipython3
-clean_ces_data = ds.Table.read_table("../data/cleaned_data_new.csv")
+clean_ces_data = ds.Table.read_table("https://cal-icor.github.io/textbook.data/espm-163/cleaned.csv")
 
 clean_ces_data
 ```
@@ -114,7 +114,7 @@ You came across this number last time in the lecture notebook. You already know 
 1. **What the relationship between two variables looks like** and 
 2. **How strong that relationship is**.
 
-![image](../images/correlation-examples.svg)
+![image](https://cal-icor.github.io/textbook.data/espm-163/corr.svg)
 
 We defined functions that help us calculate the correlation coefficient in lecture. Don't worry about how it is defined -- simply run the cell below!
 

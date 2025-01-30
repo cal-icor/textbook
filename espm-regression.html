@@ -327,7 +327,7 @@ a:visited {
 <p>We will be using data from the website of the Office of Environmental Health Hazard Assessment. The file includes environmental and population data across different counties of California. In order to analyze the data, we must first import it to our Jupyter notebook and create a table. We will call this table <code class="docutils literal notranslate"><span class="pre">ces_data</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ces_data</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">Table</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s2">&quot;../data/ces_data.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ces_data</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">Table</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s2">&quot;https://cal-icor.github.io/textbook.data/espm-163/ces.csv&quot;</span><span class="p">)</span>
 <span class="n">ces_data</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -337,7 +337,7 @@ a:visited {
 <p><strong>We have done this for you</strong>: simply run the cell below to save a clean version of the data as <code class="docutils literal notranslate"><span class="pre">clean_ces_data</span></code>. From this point forward, we’ll use this cleaned CES data to run our analysis.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clean_ces_data</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">Table</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s2">&quot;../data/cleaned_data_new.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">clean_ces_data</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">Table</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s2">&quot;https://cal-icor.github.io/textbook.data/espm-163/cleaned.csv&quot;</span><span class="p">)</span>
 
 <span class="n">clean_ces_data</span>
 </pre></div>
@@ -373,7 +373,7 @@ a:visited {
 <li><p><strong>What the relationship between two variables looks like</strong> and</p></li>
 <li><p><strong>How strong that relationship is</strong>.</p></li>
 </ol>
-<p><img alt="image" src="../images/correlation-examples.svg" /></p>
+<p><img alt="image" src="https://cal-icor.github.io/textbook.data/espm-163/corr.svg" /></p>
 <p>We defined functions that help us calculate the correlation coefficient in lecture. Don’t worry about how it is defined – simply run the cell below!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
