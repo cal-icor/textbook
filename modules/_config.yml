@@ -3,7 +3,7 @@
 
 title: Modules Showcase
 author: Jonathan Ferrari
-logo: light.svg
+logo: ds.svg
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -38,7 +38,7 @@ sphinx:
     html_static_path: ['_static']
     html_theme_options:
       quantecon_project: False
-      dark_logo: dark.svg
+      dark_logo: ds.svg
       repository_url: https://github.com/cal-icor/textbook
       nb_repository_url: https://github.com/cal-icor/textbook.notebooks
       description: This website presents a set of lectures on python programming for various fields.

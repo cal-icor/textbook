@@ -11,21 +11,19 @@ kernelspec:
   name: python3
 ---
 
-# [ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!
+# [ESPM-163AC]: Lab2 - Introduction to Prediction Part 2
 
-*Estimated Time: ~50 minutes*
+> Estimated Time: ~50 minutes
 
 One of the most important and interesting aspects of data science is making predictions about the future. Can we predict temperatures a few decades from now by analyzing historical data about climate change and pollution? Based on a person's social media profile, what conclusions can we draw about their interests? How can we use a patient's medical history to judge how well he or she will respond to a treatment?
 
 In last week's lab, you learned a bunch of data science techniques to manipulate tables and make cool visualizations out of them. In lecture this week, we studied concepts of correlation and regression to make predictions in one outcome based on another factor (or factors). Today, we will be putting these skills together to study relationships between race, environmental factors, and health outcomes. Specifically, we will **predict health outcomes (cardiovascular disease, asthma, etc.) based on an environmental factor and race**. We will interpret the correlation coefficients and visualizations of predictions.
 
-You've already seen how all of this comes together in lecture this week. In this lab, we will revisit our example of **the effect of race and air pollution on reported asthma rates** and, in the end, have you follow our steps to run a prediction using a **different** set of variables and interpret the results. 
+You've already seen how all of this comes together in lecture this week. In this lab, we will revisit our example of **the effect of race and air pollution on reported asthma rates** and, in the end, have you follow our steps to run a prediction using a **different** set of variables and interpret the results.
 
 If you feel comfortable with the concepts we covered in lecture, feel free to skim through Part 1 (Review Section) and start on Part 2 (your own analysis)! If you need some reinforcement, don't worry -- carefully read Part 1 and follow along with the provided example (from lecture) as you do your own analysis.
 
-
-
-### Table of Contents
+## Table of Contents
 
 [The Data](#section_data)
 
@@ -36,7 +34,6 @@ If you feel comfortable with the concepts we covered in lecture, feel free to sk
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 - [Linear Regression](#subsection_2)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 - [Coefficient of Determination](#subsection_3)
-
 
 [Part II: Simple Linear Regression](#section_linreg)
 
@@ -50,13 +47,13 @@ If you feel comfortable with the concepts we covered in lecture, feel free to sk
 
 [Peer Consulting Information](#section_pc)
 
+### Let's get started
 
-
-
-### Let's get started! 
 Run the cell below to import the tools we'll use in this notebook. Don't worry about getting an output -- simply run the cell!
 
 ```{code-cell} ipython3
+import warnings
+warnings.filterwarnings("ignore")
 import datascience as ds
 import numpy as np
 import pandas as pd
@@ -404,6 +401,7 @@ fit.summary()
 ```
 
 **Question:**
+
 - Interpret your correlation coefficient
 - Interpret your graph -- do you notice anything interesting?
 - Interpret the r-squared
@@ -438,6 +436,7 @@ fit.summary()
 ```
 
 **Question:**
+
 - Interpret your correlation coefficient
 - Interpret your graph -- do you notice anything interesting?
 - Interpret the r-squared
