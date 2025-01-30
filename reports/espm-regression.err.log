@@ -15,27 +15,18 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import datascience as ds
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plots
-import scipy as sp
-%matplotlib inline
-from mpl_toolkits.mplot3d import Axes3D
-import statsmodels.formula.api as sm
+correlation(...,...,...)
 ------------------
 
------ stderr -----
-/Users/jonathanferrari/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
-  warnings.warn(
-------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 8[0m
-[1;32m      6[0m get_ipython()[38;5;241m.[39mrun_line_magic([38;5;124m'[39m[38;5;124mmatplotlib[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124minline[39m[38;5;124m'[39m)
-[1;32m      7[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01mmpl_toolkits[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmplot3d[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m Axes3D
-[0;32m----> 8[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mstatsmodels[39;00m[38;5;21;01m.[39;00m[38;5;21;01mformula[39;00m[38;5;21;01m.[39;00m[38;5;21;01mapi[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01msm[39;00m
+[0;31mAttributeError[0m                            Traceback (most recent call last)
+Cell [0;32mIn[7], line 1[0m
+[0;32m----> 1[0m [43mcorrelation[49m[43m([49m[38;5;241;43m.[39;49m[38;5;241;43m.[39;49m[38;5;241;43m.[39;49m[43m,[49m[38;5;241;43m.[39;49m[38;5;241;43m.[39;49m[38;5;241;43m.[39;49m[43m,[49m[38;5;241;43m.[39;49m[38;5;241;43m.[39;49m[38;5;241;43m.[39;49m[43m)[49m
 
-[0;31mModuleNotFoundError[0m: No module named 'statsmodels'
+Cell [0;32mIn[5], line 6[0m, in [0;36mcorrelation[0;34m(table, label_x, label_y)[0m
+[1;32m      5[0m [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21mcorrelation[39m(table, label_x, label_y):
+[0;32m----> 6[0m     [38;5;28;01mreturn[39;00m np[38;5;241m.[39mmean(standard_units([43mtable[49m[38;5;241;43m.[39;49m[43mcolumn[49m(label_x))[38;5;241m*[39mstandard_units(table[38;5;241m.[39mcolumn(label_y)))
+
+[0;31mAttributeError[0m: 'ellipsis' object has no attribute 'column'
 

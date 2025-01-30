@@ -52,6 +52,8 @@ If you feel comfortable with the concepts we covered in lecture, feel free to sk
 Run the cell below to import the tools we'll use in this notebook. Don't worry about getting an output -- simply run the cell!
 
 ```{code-cell} ipython3
+import warnings
+warnings.filterwarnings("ignore")
 import datascience as ds
 import numpy as np
 import pandas as pd
