@@ -104,18 +104,19 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'markdown-notebooks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!" href="espm-regression.html" />
     <link rel="prev" title="Content with notebooks" href="notebooks.html" />
 
 <!-- Normal Meta Tags -->
 <meta name="author" context="Jonathan Ferrari" />
 <meta name="keywords" content="" />
-<meta name="description" content=Notebooks with MyST Markdown  Jupyter Book also lets you write text-based notebooks using MyST Markdown. See the Notebooks with MyST Markdown documentation for  />
+<meta name="description" content=This website presents a set of lectures on python programming for various fields. />
 
 <!-- Twitter tags -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
 <meta name="twitter:title" content="Notebooks with MyST Markdown"/>
-<meta name="twitter:description" content="Notebooks with MyST Markdown  Jupyter Book also lets you write text-based notebooks using MyST Markdown. See the Notebooks with MyST Markdown documentation for ">
+<meta name="twitter:description" content="This website presents a set of lectures on python programming for various fields.">
 <meta name="twitter:creator" content="@">
 <meta name="twitter:image" content="">
 
@@ -124,13 +125,45 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="None" />
 <meta property="og:image" content="" />
-<meta property="og:description" content="Notebooks with MyST Markdown  Jupyter Book also lets you write text-based notebooks using MyST Markdown. See the Notebooks with MyST Markdown documentation for " />
+<meta property="og:description" content="This website presents a set of lectures on python programming for various fields." />
 <meta property="og:site_name" content="Modules Showcase" />
 <meta name="theme-color" content="#ffffff" />
 
   </head>
 <body>
 
+<!-- Override QuantEcon theme colors -->
+<style>
+a {
+    color: #313131;
+}
+a:hover {
+    color: #313131;
+}
+a:visited {
+  color: #111111;
+}
+
+.main-index {
+  #qe-page-author-links {
+    border-bottom: 5px solid #313131;
+  }
+}
+
+.qe-page__header {
+  border-bottom: 5px solid #313131;
+}
+
+.qe-page__footer {
+    border-top: 5px solid #313131;
+}
+
+.toctree-wrapper {
+    .caption-text {
+        color: #111111
+    }
+}
+</style>
 
     <span id="top"></span>
 
@@ -279,6 +312,8 @@ See the YAML at the top of this page for example.</p></li>
 
                     <p>Creative Commons License &ndash; This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International.</p>
 
+                    <p>A theme by <a href="https://quantecon.org">QuantEcon</a></p>
+
                 </footer> <!-- .page__footer -->
 
             </div> <!-- .page -->
@@ -296,14 +331,7 @@ See the YAML at the top of this page for example.</p></li>
                 </div>
 
                 <nav class="qe-sidebar__nav" id="qe-sidebar-nav" aria-label="Main navigation">
-                    <ul class="nav bd-sidenav nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Welcome to your Jupyter Book
-  </a>
- </li>
-</ul>
-<ul class="current nav bd-sidenav nav sidenav_l1">
+                    <ul class="current nav bd-sidenav nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="markdown.html">
    Markdown Files
@@ -317,6 +345,11 @@ See the YAML at the top of this page for example.</p></li>
  <li class="toctree-l1 current active active">
   <a class="current reference internal" href="#">
    Notebooks with MyST Markdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="espm-regression.html">
+   [ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!
   </a>
  </li>
 </ul>
@@ -338,13 +371,12 @@ See the YAML at the top of this page for example.</p></li>
                 <ul class="qe-toolbar__main">
                     <li data-tippy-content="Table of Contents" class="btn__sidebar"><i data-feather="menu"></i></li>
                     <li data-tippy-content="Home"><a href="intro.html"><i data-feather="home"></i></a></li>
-                    <li class="btn__qelogo"><a href="" title=""><span class="show-for-sr"></span></a></li>
                 </ul>
 
                 <ul class="qe-toolbar__links">
                     <li class="btn__search">
                         <form action="search.html" method="get">
-                            <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" accesskey="k">
+                            <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" accesskey="k">
                             <i data-feather="search" id="search-icon"></i>
                         </form>
                     </li>
@@ -352,6 +384,7 @@ See the YAML at the top of this page for example.</p></li>
                     <li data-tippy-content="Increase font size" class="btn__plus"><i data-feather="plus-circle"></i></li>
                     <li data-tippy-content="Decrease font size" class="btn__minus"><i data-feather="minus-circle"></i></li>
                     <li data-tippy-content="Change contrast" class="btn__contrast"><i data-feather="sunset"></i></li>
+                    <li class="settings-button" id="settingsButton"><div data-tippy-content="Launch Notebook"><i data-feather="play-circle"></i></div></li>
                         <li data-tippy-content="Download PDF" onClick="window.print()"><i data-feather="file"></i></li>
                     <!--
                     # Enable if looking for link to specific document hosted on GitHub
@@ -386,16 +419,18 @@ See the YAML at the top of this page for example.</p></li>
                 <span class="label">Public</span>
                 <select id="launcher-public-input">
                 
+                    <option value="https://colab.research.google.com/github/cal-icor/textbook.notebooks/blob/main/markdown-notebooks.ipynb">Colab</option>
+                
                 </select>
                 <i class="fas fa-check-circle"></i>
             </li>
             <li class="launcher-private">
                 <span class="label">Private</span>
-                <input type="text" id="launcher-private-input" data-repourl="" data-urlpath="" data-branch=>
+                <input type="text" id="launcher-private-input" data-repourl="https://github.com/cal-icor/textbook.notebooks" data-urlpath="tree/textbook.notebooks/markdown-notebooks.ipynb" data-branch=main>
                 <i class="fas fa-check-circle"></i>
             </li>
             </ul>
-            <p class="launch"><a href="" id="advancedLaunchButton" target="_blank">Launch Notebook</a></p>
+            <p class="launch"><a href="https://colab.research.google.com/github/cal-icor/textbook.notebooks/blob/main/markdown-notebooks.ipynb" id="advancedLaunchButton" target="_blank">Launch Notebook</a></p>
             <script>
                 // QuantEcon Notebook Launcher
                 const launcherTypeElements = document.querySelectorAll('#settingsModal .modal-servers li');
@@ -426,9 +461,9 @@ See the YAML at the top of this page for example.</p></li>
                 const launcherPublic = document.getElementById('launcher-public-input');
                 const launcherPrivate = document.getElementById('launcher-private-input');
                 const pageName = "markdown-notebooks";
-                const repoURL = "";
-                const urlPath = "";
-                const branch = ""
+                const repoURL = "https://github.com/cal-icor/textbook.notebooks";
+                const urlPath = "tree/textbook.notebooks/markdown-notebooks.ipynb";
+                const branch = "main"
                 const launchNotebookLink = document.getElementById('advancedLaunchButton');
 
                 // Highlight public server option if previous selection exists
