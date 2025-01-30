@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2! &#8212; Modules Showcase</title>
+    <title>[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2 &#8212; Modules Showcase</title>
     <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -116,13 +116,13 @@
 <!-- Twitter tags -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
-<meta name="twitter:title" content="[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!"/>
+<meta name="twitter:title" content="[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2"/>
 <meta name="twitter:description" content="This website presents a set of lectures on python programming for various fields.">
 <meta name="twitter:creator" content="@">
 <meta name="twitter:image" content="">
 
 <!-- Opengraph tags -->
-<meta property="og:title" content="[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!" />
+<meta property="og:title" content="[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="None" />
 <meta property="og:image" content="" />
@@ -186,9 +186,11 @@ a:visited {
 
                         <nav id="bd-toc-nav" class="qe-page__toc-nav">
                             <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-get-started">Let’s get started!</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of Contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-get-started">Let’s get started</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-data">The Data <a id="section_data"></a></a></li>
@@ -254,7 +256,7 @@ a:visited {
 
                         <p class="qe-page__header-heading"><a href="intro.html">Modules Showcase</a></p>
 
-                        <p class="qe-page__header-subheading">[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!</p>
+                        <p class="qe-page__header-subheading">[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2</p>
 
                     </div>
                     <!-- length 2, since its a string and empty dict has length 2 - {} -->
@@ -271,8 +273,10 @@ a:visited {
                     <div>
                         
   <div class="tex2jax_ignore mathjax_ignore section" id="espm-163ac-lab2-introduction-to-prediction-part-2">
-<h1>[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!<a class="headerlink" href="#espm-163ac-lab2-introduction-to-prediction-part-2" title="Permalink to this heading">#</a></h1>
-<p><em>Estimated Time: ~50 minutes</em></p>
+<h1>[ESPM-163AC]: Lab2 - Introduction to Prediction Part 2<a class="headerlink" href="#espm-163ac-lab2-introduction-to-prediction-part-2" title="Permalink to this heading">#</a></h1>
+<blockquote>
+<div><p>Estimated Time: ~50 minutes</p>
+</div></blockquote>
 <p>One of the most important and interesting aspects of data science is making predictions about the future. Can we predict temperatures a few decades from now by analyzing historical data about climate change and pollution? Based on a person’s social media profile, what conclusions can we draw about their interests? How can we use a patient’s medical history to judge how well he or she will respond to a treatment?</p>
 <p>In last week’s lab, you learned a bunch of data science techniques to manipulate tables and make cool visualizations out of them. In lecture this week, we studied concepts of correlation and regression to make predictions in one outcome based on another factor (or factors). Today, we will be putting these skills together to study relationships between race, environmental factors, and health outcomes. Specifically, we will <strong>predict health outcomes (cardiovascular disease, asthma, etc.) based on an environmental factor and race</strong>. We will interpret the correlation coefficients and visualizations of predictions.</p>
 <p>You’ve already seen how all of this comes together in lecture this week. In this lab, we will revisit our example of <strong>the effect of race and air pollution on reported asthma rates</strong> and, in the end, have you follow our steps to run a prediction using a <strong>different</strong> set of variables and interpret the results.</p>
@@ -290,9 +294,8 @@ a:visited {
 <p>       6 - <a class="reference internal" href="#subsection_6"><span class="xref myst">You Try!</span></a></p>
 <p><a class="reference internal" href="#section_multreg"><span class="xref myst">Part III: Multiple Regression!!</span></a></p>
 <p><a class="reference internal" href="#section_pc"><span class="xref myst">Peer Consulting Information</span></a></p>
-</div>
 <div class="section" id="let-s-get-started">
-<h2>Let’s get started!<a class="headerlink" href="#let-s-get-started" title="Permalink to this heading">#</a></h2>
+<h3>Let’s get started<a class="headerlink" href="#let-s-get-started" title="Permalink to this heading">#</a></h3>
 <p>Run the cell below to import the tools we’ll use in this notebook. Don’t worry about getting an output – simply run the cell!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -308,15 +311,20 @@ a:visited {
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/jonathanferrari/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#39;ssl&#39; module is compiled with &#39;LibreSSL 2.8.3&#39;. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">datascience</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ds</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;matplotlib&#39;</span><span class="p">,</span> <span class="s1">&#39;inline&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span><span class="w"> </span><span class="nn">mpl_toolkits.mplot3d</span><span class="w"> </span><span class="kn">import</span> <span class="n">Axes3D</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.formula.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sm</span>
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;datascience&#39;
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;statsmodels&#39;
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -962,7 +970,7 @@ It’s called <strong>r-squared</strong> because in simple linear regression, th
  </li>
  <li class="toctree-l1 current active active">
   <a class="current reference internal" href="#">
-   [ESPM-163AC]: Lab2 - Introduction to Prediction Part 2!
+   [ESPM-163AC]: Lab2 - Introduction to Prediction Part 2
   </a>
  </li>
 </ul>
