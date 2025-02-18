@@ -48,7 +48,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: "modules/_build/html"
-          artifact-name: pages
+          artifact_name: pages
 
       # Deploy the uploaded artifact to GitHub Pages.
       # (The deploy-pages action will look for the artifact with the name "pages".)
@@ -56,7 +56,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
         with:
-          artifact-name: pages
+          artifact_name: pages
 
       # Clean up the build directory (removes modules/_build but leaves modules/)
       - name: Clean up build directory
