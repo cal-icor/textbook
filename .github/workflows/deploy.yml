@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # Install dependencies
+      # Install dependencies and set up Python
       - name: Set up Python 3.11
         uses: actions/setup-python@v4
         with:
@@ -28,9 +28,7 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      # (optional) Cache your executed notebooks between runs
-      # If you have notebook execution caching enabled in your book's config,
-      # update the cache path to where the notebooks are cached.
+      # Cache your executed notebooks (if applicable)
       - name: Cache executed notebooks
         uses: actions/cache@v3
         with:
@@ -44,7 +42,7 @@ jobs:
 
       # Upload the book's HTML as an artifact (for GitHub Pages)
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
           path: "modules/_build/html"
 
