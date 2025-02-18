@@ -45,7 +45,7 @@ jobs:
       # Upload the generated HTML as an artifact using v4 of the artifact action.
       # Explicitly naming it "pages" so the deploy step can find it.
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           path: "modules/_build/html"
           artifact-name: pages
