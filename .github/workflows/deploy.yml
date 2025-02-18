@@ -1,13 +1,11 @@
 name: deploy-book
 
-# Run this when the master or main branch changes
+# Trigger on pushes to master or main branches
 on:
   push:
     branches:
       - master
       - main
-    # paths:
-    #   - modules/**
 
 jobs:
   deploy-book:
@@ -18,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # Install dependencies and set up Python
+      # Set up Python 3.11 and install dependencies
       - name: Set up Python 3.11
         uses: actions/setup-python@v4
         with:
@@ -28,7 +26,7 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      # Cache your executed notebooks (if applicable)
+      # Cache executed notebooks (if applicable)
       - name: Cache executed notebooks
         uses: actions/cache@v3
         with:
@@ -40,16 +38,25 @@ jobs:
         run: |
           jupyter-book build --all modules
 
-      # Upload the book's HTML as an artifact (for GitHub Pages)
+      # Debug step: List the build output to verify files exist
+      - name: List build output
+        run: ls -al modules/_build/html
+
+      # Upload the generated HTML as an artifact using v4 of the artifact action.
+      # Explicitly naming it "pages" so the deploy step can find it.
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v4
         with:
           path: "modules/_build/html"
+          artifact-name: pages
 
-      # Deploy the book's HTML to GitHub Pages
+      # Deploy the uploaded artifact to GitHub Pages.
+      # (The deploy-pages action will look for the artifact with the name "pages".)
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        with:
+          artifact-name: pages
 
       # Clean up the build directory (removes modules/_build but leaves modules/)
       - name: Clean up build directory
