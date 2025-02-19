@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy-book:
+  build:
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -22,9 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -V
           pip install -r requirements.txt
-          pip list
 
       - name: Cache executed notebooks
         uses: actions/cache@v3
@@ -32,80 +30,29 @@ jobs:
           path: modules/_build/.jupyter_cache
           key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
 
-      - name: Debug initial modules structure
-        run: ls -alR modules || echo "Modules folder does not exist"
-
-      - name: Fully clean old artifacts
-        run: rm -rf modules/_build/html modules/_build/.jupyter_cache
-
       - name: Build the book
         run: |
-          set -e
-          jupyter-book --version
           jupyter-book build --all modules || { echo "Build failed"; exit 1; }
-
-      - name: Debug build output
-        run: ls -alR modules/_build || echo "Build directory does not exist"
-
-      - name: Verify HTML output
-        run: |
-          if [ -d "modules/_build/html" ]; then
-            echo "HTML output exists"
-            ls -alR modules/_build/html
-          else
-            echo "HTML output is missing!"
-            exit 1
-          fi
-
-      - name: Create .nojekyll file
-        run: touch modules/_build/html/.nojekyll
-
-      - name: Remove unnecessary Sphinx build files
-        run: rm -f modules/_build/html/.buildinfo
-
-      - name: Remove Sphinx-Rediraffe config
-        run: rm -f modules/_build/html/_rediraffe_redirected.json
-
-      - name: Check for symlinks
-        run: find modules/_build/html -type l
-
-      - name: Remove symlinks if found
-        run: find modules/_build/html -type l -exec rm {} \;
-
-      - name: Check artifact size
-        run: du -sh modules/_build/html
-
-      - name: Debug list of all files before upload
-        run: find modules/_build/html -type f -exec ls -lh {} \;
-
-      - name: Debug non-text files
-        run: find modules/_build/html -type f ! -name "*.html" ! -name "*.css" ! -name "*.js" ! -name "*.png" ! -name "*.jpg" ! -name "*.svg" ! -name "*.json" -exec ls -lh {} \;
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+          
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: "modules/_build/html"
-          artifact_name: artifact
-          if-no-files-found: error
 
-      - name: Check uploaded artifacts
-        run: ls -alR /home/runner/work/_temp/_runner_file_commands || echo "Artifacts directory not found"
-
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: artifact
 
-      - name: Check GitHub Pages logs
-        run: |
-          echo "Fetching latest GitHub Pages deployment logs..."
-          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-               -H "Accept: application/vnd.github.v3+json" \
-               https://api.github.com/repos/${{ github.repository }}/pages/deployment
-
-      - name: List final structure before cleanup
-        run: ls -alR modules/_build || echo "Build directory missing before cleanup"
-
+  cleanup:
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
       - name: Clean up build directory
         run: rm -rf modules/_build
