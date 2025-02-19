@@ -1,24 +1,20 @@
 name: deploy-book
 
-# Trigger on pushes to master or main branches
 on:
   push:
     branches:
-      - master
-      - main
+      - main  # Ensure your repository allows deployment from 'main'
 
 jobs:
   deploy-book:
-    environment:
-      name: github-pages
     runs-on: ubuntu-latest
     permissions:
       pages: write
       id-token: write
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      # Set up Python 3.11 and install dependencies
       - name: Set up Python 3.11
         uses: actions/setup-python@v4
         with:
@@ -30,35 +26,72 @@ jobs:
           pip install -r requirements.txt
           pip list  # Debugging installed packages
 
-      # Cache executed notebooks (if applicable)
       - name: Cache executed notebooks
         uses: actions/cache@v3
         with:
           path: modules/_build/.jupyter_cache
           key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
 
-      # Build the book from the modules folder
+      - name: Debug initial modules structure
+        run: ls -alR modules || echo "Modules folder does not exist"
+
+      # Clean up old build output to ensure a fresh build
+      - name: Clean previous build
+        run: rm -rf modules/_build/html || echo "No previous build to remove"
+
       - name: Build the book
         run: |
-          set -e  # Exit immediately on failure
+          set -e  # Exit on failure
           jupyter-book --version  # Debugging jupyter-book version
           jupyter-book build --all modules || { echo "Build failed"; exit 1; }
 
-      # Upload the generated HTML as an artifact
+      - name: Debug build output
+        run: ls -alR modules/_build || echo "Build directory does not exist"
+
+      - name: Verify HTML output
+        run: |
+          if [ -d "modules/_build/html" ]; then
+            echo "HTML output exists"
+            ls -alR modules/_build/html
+          else
+            echo "HTML output is missing!"
+            exit 1
+          fi
+
+      # **Check and Remove Symlinks (GitHub Pages Restriction)**
+      - name: Check for symlinks
+        run: |
+          echo "Checking for symlinks..."
+          find modules/_build/html -type l
+
+      - name: Remove symlinks if found
+        run: |
+          find modules/_build/html -type l -exec rm {} \;
+
+      # **Check Total Artifact Size**
+      - name: Check artifact size
+        run: du -sh modules/_build/html
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           path: "modules/_build/html"
+          artifact_name: pages
           if-no-files-found: error  # Fail explicitly if no files are found
 
-      # Deploy the uploaded artifact to GitHub Pages
+      - name: Check uploaded artifacts
+        run: |
+          echo "Listing artifacts in runner directory..."
+          ls -alR /home/runner/work/_temp/_runner_file_commands || echo "Artifacts directory not found"
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: "artifact"  # Ensure this matches the uploaded artifact name
-          branch: gh-pages
+          artifact_name: pages  # Ensure this matches the uploaded artifact name
 
-      # Clean up the build directory
+      - name: List final structure before cleanup
+        run: ls -alR modules/_build || echo "Build directory missing before cleanup"
+
       - name: Clean up build directory
         run: rm -rf modules/_build
