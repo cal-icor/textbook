@@ -24,7 +24,9 @@ jobs:
 
       - name: Install dependencies
         run: |
+          python -V  # Debug: Check Python version
           pip install -r requirements.txt
+          pip list  # Debug: Check installed packages
 
       # Cache executed notebooks (if applicable)
       - name: Cache executed notebooks
@@ -33,31 +35,54 @@ jobs:
           path: modules/_build/.jupyter_cache
           key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
 
+      # Debug: Ensure modules folder exists before build
+      - name: Debug: Check initial modules structure
+        run: ls -alR modules || echo "Modules folder does not exist"
+
       # Build the book from the modules folder
       - name: Build the book
         run: |
-          jupyter-book build --all modules
+          set -e  # Exit immediately on failure
+          jupyter-book --version  # Debug: Check jupyter-book version
+          jupyter-book build --all modules || { echo "Build failed"; exit 1; }
 
-      # Debug step: List the build output to verify files exist
-      - name: List build output
-        run: ls -al modules/_build/html
+      # Debug: List build output to verify files exist
+      - name: Debug: List build output
+        run: ls -alR modules/_build || echo "Build directory does not exist"
 
-      # Upload the generated HTML as an artifact using v4 of the artifact action.
-      # Explicitly naming it "pages" so the deploy step can find it.
+      # Debug: Check if HTML output exists
+      - name: Debug: Verify HTML output
+        run: |
+          if [ -d "modules/_build/html" ]; then
+            echo "HTML output exists"
+            ls -alR modules/_build/html
+          else
+            echo "HTML output is missing!"
+            exit 1
+          fi
+
+      # Upload the generated HTML as an artifact
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           path: "modules/_build/html"
           artifact_name: pages
 
-      # Deploy the uploaded artifact to GitHub Pages.
-      # (The deploy-pages action will look for the artifact with the name "pages".)
+      # Debug: Check uploaded artifacts
+      - name: Debug: List uploaded artifacts
+        run: ls -alR /home/runner/work/_actions/actions/upload-artifact/v4 || echo "Artifacts directory not found"
+
+      # Deploy the uploaded artifact to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
         with:
           artifact_name: pages
 
-      # Clean up the build directory (removes modules/_build but leaves modules/)
+      # Debug: Final check before cleanup
+      - name: Debug: List final structure
+        run: ls -alR modules/_build || echo "Build directory missing before cleanup"
+
+      # Clean up the build directory
       - name: Clean up build directory
         run: rm -rf modules/_build
