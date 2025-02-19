@@ -36,7 +36,7 @@ jobs:
           key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
 
       # Debug: Ensure modules folder exists before build
-      - name: Debug Check initial modules structure
+      - name: Debug: Check initial modules structure
         run: ls -alR modules || echo "Modules folder does not exist"
 
       # Build the book from the modules folder
@@ -47,11 +47,11 @@ jobs:
           jupyter-book build --all modules || { echo "Build failed"; exit 1; }
 
       # Debug: List build output to verify files exist
-      - name: Debug List build output
+      - name: Debug: List build output
         run: ls -alR modules/_build || echo "Build directory does not exist"
 
-      # Debug: Check if HTML output exists
-      - name: Debug Verify HTML output
+      # Debug: Verify HTML output exists before upload
+      - name: Debug: Verify HTML output
         run: |
           if [ -d "modules/_build/html" ]; then
             echo "HTML output exists"
@@ -67,20 +67,23 @@ jobs:
         with:
           path: "modules/_build/html"
           artifact_name: pages
+          if-no-files-found: error  # Explicitly fail if no files are found
 
       # Debug: Check uploaded artifacts
-      - name: Debug List uploaded artifacts
-        run: ls -alR /home/runner/work/_actions/actions/upload-artifact/v4 || echo "Artifacts directory not found"
+      - name: Debug: Check uploaded artifacts
+        run: |
+          echo "Listing artifacts in runner directory..."
+          ls -alR /home/runner/work/_temp/_runner_file_commands || echo "Artifacts directory not found"
 
       # Deploy the uploaded artifact to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
         with:
-          artifact_name: pages
+          artifact_name: pages  # Ensure this matches the uploaded artifact name
 
       # Debug: Final check before cleanup
-      - name: Debug List final structure
+      - name: Debug: List final structure
         run: ls -alR modules/_build || echo "Build directory missing before cleanup"
 
       # Clean up the build directory
