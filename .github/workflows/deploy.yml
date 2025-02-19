@@ -57,6 +57,7 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           artifact_name: "artifact"  # Ensure this matches the uploaded artifact name
+          branch: gh-pages
 
       # Clean up the build directory
       - name: Clean up build directory
