@@ -24,9 +24,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -V  # Debug: Check Python version
+          python -V  # Debugging Python version
           pip install -r requirements.txt
-          pip list  # Debug: Check installed packages
+          pip list  # Debugging installed packages
 
       # Cache executed notebooks (if applicable)
       - name: Cache executed notebooks
@@ -35,23 +35,23 @@ jobs:
           path: modules/_build/.jupyter_cache
           key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
 
-      # Debug: Ensure modules folder exists before build
-      - name: Debug: Check initial modules structure
+      # Debug initial modules folder structure
+      - name: Debug initial modules structure
         run: ls -alR modules || echo "Modules folder does not exist"
 
       # Build the book from the modules folder
       - name: Build the book
         run: |
           set -e  # Exit immediately on failure
-          jupyter-book --version  # Debug: Check jupyter-book version
+          jupyter-book --version  # Debugging jupyter-book version
           jupyter-book build --all modules || { echo "Build failed"; exit 1; }
 
-      # Debug: List build output to verify files exist
-      - name: Debug: List build output
+      # Debug build output to verify files exist
+      - name: Debug build output
         run: ls -alR modules/_build || echo "Build directory does not exist"
 
-      # Debug: Verify HTML output exists before upload
-      - name: Debug: Verify HTML output
+      # Debugging to verify HTML output exists before upload
+      - name: Verify HTML output
         run: |
           if [ -d "modules/_build/html" ]; then
             echo "HTML output exists"
@@ -67,10 +67,10 @@ jobs:
         with:
           path: "modules/_build/html"
           artifact_name: pages
-          if-no-files-found: error  # Explicitly fail if no files are found
+          if-no-files-found: error  # Fail explicitly if no files are found
 
-      # Debug: Check uploaded artifacts
-      - name: Debug: Check uploaded artifacts
+      # Debugging to check uploaded artifacts
+      - name: Check uploaded artifacts
         run: |
           echo "Listing artifacts in runner directory..."
           ls -alR /home/runner/work/_temp/_runner_file_commands || echo "Artifacts directory not found"
@@ -82,8 +82,8 @@ jobs:
         with:
           artifact_name: pages  # Ensure this matches the uploaded artifact name
 
-      # Debug: Final check before cleanup
-      - name: Debug: List final structure
+      # Debugging before cleanup
+      - name: List final structure before cleanup
         run: ls -alR modules/_build || echo "Build directory missing before cleanup"
 
       # Clean up the build directory
