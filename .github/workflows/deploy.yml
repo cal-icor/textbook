@@ -35,10 +35,6 @@ jobs:
           path: modules/_build/.jupyter_cache
           key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
 
-      # Debug initial modules folder structure
-      - name: Debug initial modules structure
-        run: ls -alR modules || echo "Modules folder does not exist"
-
       # Build the book from the modules folder
       - name: Build the book
         run: |
@@ -46,45 +42,19 @@ jobs:
           jupyter-book --version  # Debugging jupyter-book version
           jupyter-book build --all modules || { echo "Build failed"; exit 1; }
 
-      # Debug build output to verify files exist
-      - name: Debug build output
-        run: ls -alR modules/_build || echo "Build directory does not exist"
-
-      # Debugging to verify HTML output exists before upload
-      - name: Verify HTML output
-        run: |
-          if [ -d "modules/_build/html" ]; then
-            echo "HTML output exists"
-            ls -alR modules/_build/html
-          else
-            echo "HTML output is missing!"
-            exit 1
-          fi
-
       # Upload the generated HTML as an artifact
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           path: "modules/_build/html"
-          artifact_name: pages
           if-no-files-found: error  # Fail explicitly if no files are found
-
-      # Debugging to check uploaded artifacts
-      - name: Check uploaded artifacts
-        run: |
-          echo "Listing artifacts in runner directory..."
-          ls -alR /home/runner/work/_temp/_runner_file_commands || echo "Artifacts directory not found"
 
       # Deploy the uploaded artifact to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
         with:
-          name: pages  # Ensure this matches the uploaded artifact name
-
-      # Debugging before cleanup
-      - name: List final structure before cleanup
-        run: ls -alR modules/_build || echo "Build directory missing before cleanup"
+          artifact_name: "artifact"  # Ensure this matches the uploaded artifact name
 
       # Clean up the build directory
       - name: Clean up build directory
