@@ -3,7 +3,7 @@ name: deploy-book
 on:
   push:
     branches:
-      - main  # Ensure your repository allows deployment from 'main'
+      - main
 
 jobs:
   deploy-book:
@@ -22,9 +22,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -V  # Debugging Python version
+          python -V
           pip install -r requirements.txt
-          pip list  # Debugging installed packages
+          pip list
 
       - name: Cache executed notebooks
         uses: actions/cache@v3
@@ -35,14 +35,13 @@ jobs:
       - name: Debug initial modules structure
         run: ls -alR modules || echo "Modules folder does not exist"
 
-      # Clean up old build output to ensure a fresh build
-      - name: Clean previous build
-        run: rm -rf modules/_build/html || echo "No previous build to remove"
+      - name: Fully clean old artifacts
+        run: rm -rf modules/_build/html modules/_build/.jupyter_cache
 
       - name: Build the book
         run: |
-          set -e  # Exit on failure
-          jupyter-book --version  # Debugging jupyter-book version
+          set -e
+          jupyter-book --version
           jupyter-book build --all modules || { echo "Build failed"; exit 1; }
 
       - name: Debug build output
@@ -58,43 +57,40 @@ jobs:
             exit 1
           fi
 
-      # **Check for and Remove Symlinks (GitHub Pages Restriction)**
+      - name: Create .nojekyll file
+        run: touch modules/_build/html/.nojekyll
+
       - name: Check for symlinks
-        run: |
-          echo "Checking for symlinks..."
-          find modules/_build/html -type l
+        run: find modules/_build/html -type l
 
       - name: Remove symlinks if found
-        run: |
-          find modules/_build/html -type l -exec rm {} \;
+        run: find modules/_build/html -type l -exec rm {} \;
 
-      # **Check Total Artifact Size**
       - name: Check artifact size
         run: du -sh modules/_build/html
 
-      # **Debug: List All Files Before Upload**
       - name: Debug list of all files before upload
         run: find modules/_build/html -type f -exec ls -lh {} \;
+
+      - name: Debug non-text files
+        run: find modules/_build/html -type f ! -name "*.html" ! -name "*.css" ! -name "*.js" ! -name "*.png" ! -name "*.jpg" ! -name "*.svg" ! -name "*.json" -exec ls -lh {} \;
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           path: "modules/_build/html"
-          artifact_name: artifact  # Ensure this matches the detected artifact name
-          if-no-files-found: error  # Fail explicitly if no files are found
+          artifact_name: artifact
+          if-no-files-found: error
 
       - name: Check uploaded artifacts
-        run: |
-          echo "Listing artifacts in runner directory..."
-          ls -alR /home/runner/work/_temp/_runner_file_commands || echo "Artifacts directory not found"
+        run: ls -alR /home/runner/work/_temp/_runner_file_commands || echo "Artifacts directory not found"
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: artifact  # Ensure this matches the uploaded artifact name
+          artifact_name: artifact
 
-      # **Debugging: Fetch GitHub Pages Deployment Logs**
       - name: Check GitHub Pages logs
         run: |
           echo "Fetching latest GitHub Pages deployment logs..."
