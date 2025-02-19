@@ -58,7 +58,7 @@ jobs:
             exit 1
           fi
 
-      # **Check and Remove Symlinks (GitHub Pages Restriction)**
+      # **Check for and Remove Symlinks (GitHub Pages Restriction)**
       - name: Check for symlinks
         run: |
           echo "Checking for symlinks..."
@@ -72,11 +72,15 @@ jobs:
       - name: Check artifact size
         run: du -sh modules/_build/html
 
+      # **Debug: List All Files Before Upload**
+      - name: Debug list of all files before upload
+        run: find modules/_build/html -type f -exec ls -lh {} \;
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           path: "modules/_build/html"
-          artifact_name: pages
+          artifact_name: artifact  # Ensure this matches the detected artifact name
           if-no-files-found: error  # Fail explicitly if no files are found
 
       - name: Check uploaded artifacts
@@ -89,6 +93,14 @@ jobs:
         uses: actions/deploy-pages@v4
         with:
           artifact_name: artifact  # Ensure this matches the uploaded artifact name
+
+      # **Debugging: Fetch GitHub Pages Deployment Logs**
+      - name: Check GitHub Pages logs
+        run: |
+          echo "Fetching latest GitHub Pages deployment logs..."
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+               -H "Accept: application/vnd.github.v3+json" \
+               https://api.github.com/repos/${{ github.repository }}/pages/deployment
 
       - name: List final structure before cleanup
         run: ls -alR modules/_build || echo "Build directory missing before cleanup"
