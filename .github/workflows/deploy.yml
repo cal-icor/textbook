@@ -29,13 +29,7 @@ jobs:
         with:
           path: modules/_build/.jupyter_cache
           key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
-  build:
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    needs: setup
-    steps:
+  
       - name: Build the book
         run: |
           jupyter-book build --all modules || { echo "Build failed"; exit 1; }
