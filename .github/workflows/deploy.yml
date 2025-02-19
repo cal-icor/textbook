@@ -60,6 +60,12 @@ jobs:
       - name: Create .nojekyll file
         run: touch modules/_build/html/.nojekyll
 
+      - name: Remove unnecessary Sphinx build files
+        run: rm -f modules/_build/html/.buildinfo
+
+      - name: Remove Sphinx-Rediraffe config
+        run: rm -f modules/_build/html/_rediraffe_redirected.json
+
       - name: Check for symlinks
         run: find modules/_build/html -type l
 
