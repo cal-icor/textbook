@@ -66,7 +66,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: "modules/_build/html"
-          artifact_name: pages
+          name: pages
           if-no-files-found: error  # Fail explicitly if no files are found
 
       # Debugging to check uploaded artifacts
@@ -80,7 +80,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
         with:
-          artifact_name: pages  # Ensure this matches the uploaded artifact name
+          name: pages  # Ensure this matches the uploaded artifact name
 
       # Debugging before cleanup
       - name: List final structure before cleanup
