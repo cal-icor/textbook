@@ -34,6 +34,7 @@ jobs:
     permissions:
       pages: write
       id-token: write
+    needs: setup
     steps:
       - name: Build the book
         run: |
