@@ -2,7 +2,3 @@ jupyter-book
 matplotlib
 numpy
 httpimport
-datascience
-pandas
-scipy
-statsmodels
