@@ -11,7 +11,6 @@ kernelspec:
   name: python3
 ---
 
-+++ {"cell_id": "00001-eedf9a46-cb0c-42bc-a90f-96265663c0d3", "deepnote_cell_type": "markdown", "tags": ["ignore"]}
 
 ## Notebook 1: Introduction to Jupyter Notebooks and Python
 
@@ -21,18 +20,15 @@ Welcome to a Jupyter Notebook! **Notebooks** are documents that support interact
 
 The way notebooks are formatted encourages **exploration**, allowing users to iteratively update code and document the results. In use cases such as **data exploration and communication**, notebooks excel. Science (and computational work in general) has become quite sophisticated: models are built upon experiments that are conducted on large swaths of data, methods and results are abstracted away into symbols, and papers are full of technical jargon. _A static document like a paper might not be sufficient to both effectively communicate a new discovery and allow someone else to discover it for themselves_.
 
-+++
 
 <div class="alert alert-block alert-danger">
     <p style="font-size:15px">In this notebook, there are some more advanced topics that are <i>"optional"</i>. This means you can just read over these sections, don't worry about fully understanding these parts unless you are really interested.
 </div>
 
-+++
 
 <hr style="border: 2px solid #003262">
 <hr style="border: 2px solid #C9B676">
 
-+++
 
 ## Learning Outcomes
 
@@ -42,18 +38,15 @@ Working through this notebook, you will learn about:
 2. How Jupyter notebooks are **structured** and **how to use them**
 3. Python fundamentals and working with **tabular data**
 
-+++
 
 <div class="alert alert-block alert-info">
     <p style="font-size":15px"><b>Note: </b>This notebook contains introduces a number of Python concepts that will be new to some and review to others. Take a look at the entire notebook to guage your familiarity with the content before getting started. Start early, and don't be discouraged if each section requires a different time commitment!</p>
 </div>
 
-+++
 
 <hr style="border: 2px solid #003262">
 <hr style="border: 2px solid #C9B676">
 
-+++ {"cell_id": "00003-a9cd1167-2276-4e0f-85b6-43d803731627", "deepnote_cell_type": "markdown"}
 
 ## A Brief History
 
@@ -61,19 +54,16 @@ The Jupyter Notebook is an _interactive computational environment_ that supports
 
 Though the Jupyter Notebook interface has been around only about a decade, the first notebook interface, [Mathematica](https://www.mathematica.org/), was released over 30 years ago in 1988.
 
-+++
 
 <br>
 <center><img src="https://cal-icor.github.io/textbook.data/data-4ac/mathematica.png" alt="Early Mathematica Interface" style="width: 350px;"></center>
 <center><i>The early Mathematica Interface.</i></center>
 <br>
 
-+++
 
 **Fun Etymology Fact!** \
 Project Jupyter's name is a reference to the three core programming languages supported by Jupyter, which are `Julia`, `Python` and `R` (`"ju"` from `"Julia"`, `"pyt"` from `"Python"`, and `"er"` from `"R"`; all together you get `"ju" + "pyt" + "er" = "jupyter"`). The word notebook is an homage to Galileo's notebooks in which he documents his discovery of the moons of Jupiter.
 
-+++ {"cell_id": "00004-6505161d-0615-4da6-bdf1-11b7204319a9", "deepnote_cell_type": "markdown"}
 
 ## Why Use Notebooks?
 
@@ -83,18 +73,15 @@ This approach to programming treats software as works of literature ([Knuth](htt
 
 In addition to code and natural language, notebooks can include diagrams, visualizations, and rich media, making them useful in any discipline. They are also popular in education as a tool for engaging students at various skill levels with scaffolded and diverse lessons.
 
-+++
 
 <div class="alert alert-block alert-info">
 <b>Note:</b> In our class, we'll be using Jupyter Notebooks to introduce you to how data scientists work with data, to learn about issues of justice using real-world data sets, and to also learn how to reason about the human choices embedded in the practice of data science and their significance.
 </div>
 
-+++
 
 <hr style="border: 2px solid #003262">
 <hr style="border: 2px solid #C9B676">
 
-+++ {"cell_id": "00003-058e2913-9587-45ac-8c2f-f284333ac4f3", "deepnote_cell_type": "markdown"}
 
 ## Notebook Structure
 
@@ -134,24 +121,20 @@ Let's try it! **Run the cell below to see the output.** Feel free to play around
 print("Hello World!") # Run the cell by using one of the methods we mentioned above!
 ```
 
-+++ {"cell_id": "00005-7327a678-bcb7-4a12-b09a-a4054660c9af", "deepnote_cell_type": "markdown", "tags": ["ignore"]}
 
 ### Comments
 
 Notice the blue text that starts with a `#` in the code cell above. This is a **comment**. The leading `#` tells the computer to ignore whatever text follows it. Comments help programmers organize their code and make it easier interpret. Writing helpful comments is an essential tool when collaborating on a notebook.
 
-+++
 
 <hr style="border: 2px solid #003262">
 <hr style="border: 2px solid #C9B676">
 
-+++ {"cell_id": "00006-dadd2623-2173-4cdb-8c95-207741ecc765", "deepnote_cell_type": "markdown", "tags": ["ignore"]}
 
 ## Editing the Notebook
 
 You can change the text in a markdown cell by clicking it twice. Text in markdown cells is written in [**Markdown**](https://daringfireball.net/projects/markdown/), a formatting language for plain text, so you may see some funky symbols should you try and edit a markdown cell we've already written. Once you've made changes to a markdown cell, you can exit editing mode by running the cell the same way you'd run a code cell. **Try double-clicking this text to see what some markdown formatting looks like**.
 
-+++
 
 <div class="alert alert-block alert-warning">
         <b>
@@ -159,7 +142,6 @@ You can change the text in a markdown cell by clicking it twice. Text in markdow
         </b>
 </div>
 
-+++ {"cell_id": "00007-068d7862-911b-48aa-aa89-fe1376726a4f", "deepnote_cell_type": "markdown", "tags": ["ignore"]}
 
 ### Manipulating Cells
 
@@ -169,17 +151,14 @@ To convert a cell to markdown, you can press 'Cell' in the menu bar, select 'Cel
 
 To delete a cell, simply press the scissors icon in the menu bar. A common fear is deleting a cell that you needed -- but don't worry! This can be undone using 'Edit' > 'Undo Delete Cells'! If you accidentally delete content in a cell, you can use `Ctrl` + `Z` to undo.
 
-+++
 
 <h3>Shortcuts</h3>
 
-+++
 
 <div class="alert alert-block alert-success">
     <p style="font-size:15px">This section is optional.
 </div>
 
-+++
 
 Select a cell by clicking on the empty space to the left of the text (there will be a blue bar to the left of the cell at this point)
 
@@ -195,7 +174,6 @@ Select a cell by clicking on the empty space to the left of the text (there will
 <li>To <b>convert a cell to a code cell</b>, press the <code>y</code> key </li>
 </ul>
 
-+++ {"cell_id": "00008-50df70cb-c544-42c2-8146-20897007051c", "deepnote_cell_type": "markdown", "tags": ["ignore"]}
 
 ### Saving and Loading
 
@@ -203,18 +181,15 @@ Your notebook will automatically save your text and code edits, as well as any r
 
 Next time you open your notebook, it will look the same as when you last saved it!
 
-+++
 
 <div class="alert alert-block alert-info">
         <b>Note:</b> When you load a notebook you will see all the outputs from your last saved session (such as graphs, computations, etc.) but you won't be able to use any of the variables you assigned in your code without running it again. An easy way to reload your previous work is to select the cell you left off on and click <b>"Run all above"</b> from the <b>Cell</b> tab in the menu at the top of the screen.
 </div>
 
-+++
 
 <hr style="border: 2px solid #003262">
 <hr style="border: 2px solid #C9B676">
 
-+++
 
 ## Python Basics
 
@@ -222,7 +197,6 @@ Next time you open your notebook, it will look the same as when you last saved i
 
 Just like any language, Python has a set vocabulary made up of words it can understand, and a syntax which provides the rules for how to structure our commands and give instructions.
 
-+++
 
 ### Math
 
@@ -287,7 +261,6 @@ You can even do math with strings, using `+` or `*` operators to modify them.
 "Ha" + " " + "Ha" + "     " + "Ha"
 ```
 
-+++ {"cell_id": "00012-b219d532-3d18-4f5b-8c0b-8300087fd4fc", "deepnote_cell_type": "markdown", "tags": ["ignore"]}
 
 ### Errors
 
@@ -301,7 +274,6 @@ Errors in programming are common and to be expected! Don't be afraid when you se
 print('This line is missing something.' # We are missing a closing parenthesis here!
 ```
 
-+++ {"cell_id": "00014-7e39cbe6-b521-4466-8200-3a4f652750f9", "deepnote_cell_type": "markdown", "tags": ["ignore"]}
 
 The last line of the error output attempts to tell you what went wrong.
 
@@ -309,7 +281,6 @@ The _syntax_ of a language is its structure, and this `SyntaxError` tells you th
 
 There's a lot of terminology in programming languages, but you don't need to know it all in order to program effectively. If the terms in an error message confuse you, copying the entire message and searching it online is a tried and true first step.
 
-+++ {"cell_id": "00015-6798c00d-6c61-4fb9-9db5-391b056d479c", "deepnote_cell_type": "markdown", "tags": ["ignore"]}
 
 ### Variables
 
@@ -317,20 +288,17 @@ In this Jupyter Notebook you will be assigning data, figures, numbers, text, or 
 
 Sometimes, instead of trying to work with raw information all the time in a long calculation you will want to store it as a **variable** for easy access in future calculations. **Check out how we can use variables to our advantage below!**
 
-+++
 
 <div class="alert alert-block alert-warning">
 <b>Warning:</b> In Python, variable names must be a combination of letters (capital and/or lowercase), numbers, and underscores ( _ ). <b>Variable names <i>cannot</i> begin with a number.</b>
 </div>
 
-+++
 
 - The following are all valid variable names:
   - `pants`, `pan_cakes`, `_`, `_no_fun`, `potato940`, `bowser_32`, `FOO`, `BaR`, `bAr`
 - These are invalid names:
   - `123`, `1_fun`, `f@ke`, `fun time`, `fun_times!!`, `00f00`
 
-+++
 
 ## Assignment Statements
 
@@ -346,7 +314,6 @@ After the variable name, we write an equal sign (`=`).
 
 On the right side of the equal sign, we give the variable a **value**. In this case, we assign x to be the result of adding `1 + 2 + 3 + 4`.
 
-+++
 
 <div class="alert alert-block alert-info">
         <b>Note:</b> Notice above that a cell which contains an assignment statement doesn't output anything when run. If the last line of the cell "calls" the name of a variable that has already been assigned, however, it returns that variable's value. Pay attention to this behavior in the cells below.
@@ -393,13 +360,11 @@ If a variable that is used in the definition of another variable (`x`) changes, 
 
 Try rerunning the second and third cells above where we assign `y` and return its output. Notice how the value of `y` only takes in the updated value of `x` after we re-run the cell where it is assigned!
 
-+++
 
 ### Variable Examples
 
 Let's look at a couple examples of when using variables can help us immensely!
 
-+++
 
 #### Example 1: Seconds in a Year
 
@@ -455,7 +420,6 @@ mixed_list
 
 You can add and remove values from a list. In the following example, we add new elements to the list `running_totals`, which is the sum of all of the numbers in the list already.
 
-+++
 
 <div class="alert alert-block alert-success">
     <p style="font-size:15px">This example is advanced/optional.
@@ -474,13 +438,11 @@ running_totals
 
 <h2>Loops</h2>
 
-+++
 
 <div class="alert alert-block alert-success">
     <p style="font-size:15px">This section is advanced/optional.
 </div>
 
-+++
 
 That code above is repetitive. Instead of typing that out, we can use a **for loop**. The cell below does the exact same thing as the cell above, but it is shorter and more straightforward. Check out [this documentation](https://www.w3schools.com/python/python_for_loops.asp) on for loops if you want to learn how this code works.
 
@@ -491,7 +453,6 @@ for _ in range(6):
 running_totals
 ```
 
-+++ {"cell_id": "00022-ad81de6d-4f04-4922-8b42-b54b01daeb8c", "deepnote_cell_type": "markdown"}
 
 ## Functions
 
@@ -510,7 +471,6 @@ To learn more about what a function does, follow its name with a question mark (
 round?
 ```
 
-+++ {"cell_id": "00024-61af2610-4945-4252-86a1-a4f67e1cf4ce", "deepnote_cell_type": "markdown"}
 
 Functions get used in **call expressions**, where a function is named and given values to operate on inside a set of parentheses. The `round` function returns the number it was given, rounded to the nearest whole number.
 
@@ -521,7 +481,6 @@ Functions get used in **call expressions**, where a function is named and given 
 round(1988.74699) # A call expression using the `round` function
 ```
 
-+++ {"cell_id": "00027-27b5ba99-fd19-4093-9b69-1d42154c979f", "deepnote_cell_type": "markdown"}
 
 The values a function is called on are called **arguments**, and each function places limitations on the number and type of arguments it can be called on.
 
@@ -540,13 +499,11 @@ min([9, -34, 0, 99])
 
 ### User-Defined Functions
 
-+++
 
 <div class="alert alert-block alert-success">
     <p style="font-size:15px">This section is advanced/optional
 </div>
 
-+++
 
 One of the most useful features in python is the ability to define your own functions using a `def` statement. Here is an example of one such function based on our earier example of seconds in one year:
 
@@ -579,14 +536,12 @@ print("Seconds since Berkeley was founded (the year 1868):", seconds(2022-1868))
 
 ### Practice
 
-+++ {"cell_id": "00028-85d551d0-1121-4f0d-9b6d-da0049cad3e7", "deepnote_cell_type": "markdown"}
 
 <div class="alert alert-block alert-warning">
     <li>The <code>abs</code> function takes one argument (just like <code>round</code>)</li>
     <li>The <code>max</code> function takes one or more arguments (just like <code>min</code>)</li>
 </div>
 
-+++
 
 Try calling <code>abs</code> and <code>max</code> in the cell below. What does each function do?
 
@@ -604,7 +559,6 @@ Also try calling each function <i>incorrectly</i>, such as with the wrong number
 <hr style="border: 2px solid #003262">
 <hr style="border: 2px solid #C9B676">
 
-+++ {"cell_id": "00009-52f60190-e21f-4107-99a9-d42ab128df40", "deepnote_cell_type": "markdown", "tags": ["ignore"]}
 
 ### Setting up an Environment
 
@@ -654,13 +608,11 @@ print(f"NumPy's mean of {numbers}:", np.mean(numbers))
 del harrystyles
 ```
 
-+++ {"cell_id": "00030-114d6671-9eff-4835-a25c-11b521f0f643", "deepnote_cell_type": "markdown"}
 
 #### Dot Notation
 
 Python has a lot of [built-in functions](https://docs.python.org/3/library/functions.html) (that is, functions that are already named and defined in Python), but even more functions are stored in collections called **modules**. Earlier, we imported the `math` module so we could use it later. Like with the `np.mean()` example above, we can access a module's functions by typing the name of the module, then the name of the function you want from it, separated with a `.`.
 
-+++
 
 <div class="alert alert-block alert-info">
 <p style='font-size:15px'><b>Note:</b> If you type the name of a <i>module</i>, but can't remember the name of the function you're looking for, type a dot <code>.</code>, then press the <code>Tab</code> key to bring up an auto-complete menu to help you find the function you're looking for!
@@ -674,7 +626,6 @@ Python has a lot of [built-in functions](https://docs.python.org/3/library/funct
 math.factorial(5) # A call expression with the factorial function from the math module
 ```
 
-+++ {"cell_id": "00032-6d349935-df0f-4c4d-96de-7d0769f50c3f", "deepnote_cell_type": "markdown"}
 
 <!-- BEGIN QUESTION -->
 
@@ -703,7 +654,6 @@ manual: true
 
 **Answer:** _Double click to edit this markdown cell with your answer_
 
-+++
 
 <!-- END QUESTION -->
 
@@ -722,7 +672,6 @@ random.randint(1,50)
 <hr style="border: 2px solid #003262">
 <hr style="border: 2px solid #C9B676">
 
-+++ {"cell_id": "00021-9acaedfa-35c8-4480-9195-ff3f525895da", "deepnote_cell_type": "markdown", "tags": ["ignore"]}
 
 ## Tables
 
@@ -736,7 +685,6 @@ prisons = Table.read_table("https://cal-icor.github.io/textbook.data/data-4ac/mo
 prisons
 ```
 
-+++ {"cell_id": "00023-b637dc20-fcb7-42c5-870f-622525214c86", "deepnote_cell_type": "markdown", "tags": ["ignore"]}
 
 This table is organized into **columns**, one for each category of information collected, and rows, each containing all the information collected about a particular instance of data. In this case, each row contains information about a _different_ state prison (no repeats).
 
@@ -758,7 +706,6 @@ prisons.num_columns # Get the number of columns
 prisons.num_rows # Get the number of rows
 ```
 
-+++ {"cell_id": "00026-2e8333db-5536-4fdf-baae-ce481cd4cde1", "deepnote_cell_type": "markdown", "tags": ["include"]}
 
 <!-- BEGIN QUESTION -->
 
@@ -774,11 +721,9 @@ points: 1
 manual: true
 -->
 
-+++
 
 **Answer:** _Double click to edit this markdown cell with your answer_
 
-+++ {"cell_id": "00028-e7bb87b6-8935-4c5b-a6bf-9a27a890b69b", "deepnote_cell_type": "markdown", "tags": ["ignore"]}
 
 <!-- END QUESTION -->
 
@@ -790,12 +735,10 @@ In this notebook, we worked with the [datascience](http://data8.org/datascience/
 
 Now that you have a basic grasp on Python and the kinds of information we'll be working with, we can move on to where our data came from and how to interact with it.
 
-+++
 
 <hr style="border: 2px solid #003262">
 <hr style="border: 2px solid #C9B676">
 
-+++ {"cell_id": "00033-cdd8d4fd-d181-4b60-84c6-53fce944a344", "deepnote_cell_type": "markdown"}
 
 ## Notebooks in Practice
 
@@ -815,7 +758,6 @@ The power of the notebook lies in its ability to include a **variety of media** 
 In a world in which algorithms and data analysis inform many aspects of life and where computation is getting more and more abstract, the ability to understand and reason about computational work is more important than ever.
 </div>
 
-+++
 
 <!-- BEGIN QUESTION -->
 
@@ -830,11 +772,9 @@ points: 1
 manual: true
 -->
 
-+++
 
 **Answer:** _Double click to edit this markdown cell with your answer_
 
-+++
 
 <!-- END QUESTION -->
 
@@ -851,11 +791,9 @@ points: 1
 manual: true
 -->
 
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 **Answer:** _Double click to edit this markdown cell with your answer_
 
-+++
 
 <!-- END QUESTION -->
 
@@ -863,7 +801,6 @@ manual: true
 
 Please consider filling out this [survey](https://docs.google.com/forms/d/e/1FAIpQLScd1q8VqvOMuVvLfhbVswckYKg1HFVwVu_bTF5NWbVZr4qWhw/viewform?usp=sf_link) to help us improve this module.
 
-+++
 
 **Congratulations on finishing Notebook 1!**
 
