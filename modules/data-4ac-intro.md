@@ -13,7 +13,7 @@ kernelspec:
 
 +++ {"cell_id": "00001-eedf9a46-cb0c-42bc-a90f-96265663c0d3", "deepnote_cell_type": "markdown", "tags": ["ignore"]}
 
-# Notebook 1: Introduction to Jupyter Notebooks and Python
+# Introduction to Jupyter Notebooks and Python
 
 ## **Jupyter Notebooks**
 
@@ -591,8 +591,6 @@ print("Seconds since Berkeley was founded (the year 1868):", seconds(2022-1868))
 Try calling <code>abs</code> and <code>max</code> in the cell below. What does each function do?
 
 Also try calling each function <i>incorrectly</i>, such as with the wrong number of arguments. What kinds of error messages do you see?
-
-</div>
 
 ```{code-cell} ipython3
 :cell_id: 00029-ba5cb6d4-659b-4236-87ba-a1cddd93da6f
