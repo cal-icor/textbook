@@ -111,7 +111,7 @@ You came across this number last time in the lecture notebook. You already know 
 1. **What the relationship between two variables looks like** and 
 2. **How strong that relationship is**.
 
-![image](https://raw.githubusercontent.com/cal-icor/textbook.data/refs/heads/main/espm-163/corr.svg)
+![image](https://cal-icor.github.io/textbook.data/espm-163/corr.svg)
 
 We defined functions that help us calculate the correlation coefficient in lecture. Don't worry about how it is defined -- simply run the cell below!
 
