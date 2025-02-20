@@ -25,6 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+          pip install -r modules/requirements.txt
 
       - name: Cache executed notebooks
         uses: actions/cache@v3
