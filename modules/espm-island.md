@@ -339,7 +339,7 @@ This function takes in a **DataFrame** and a **string**, and does all of the fol
 def tree_type_table(table: pd.DataFrame, name: str):
     tree = (table.query(f"Tree == '{name}'")
               .groupby("Year")
-              .agg({"Count": sum, "Rats":first})
+              .agg({"Count": "sum", "Rats":first})
               .reset_index())
     return tree
 ```
@@ -365,7 +365,7 @@ def triple_seedling_table(table: pd.DataFrame, genus: str):
     
     rats = (main.drop(columns="Forest")
                 .groupby("Year")
-                .agg({"Count": sum, "Rats": first})
+                .agg({"Count": "sum", "Rats": first})
                 .reset_index())
     return main, forest, rats
 ```
