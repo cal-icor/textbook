@@ -167,10 +167,9 @@ The first time we'll load the 0<sup>th</sup> page, and then the 1<sup>st</sup> (
 We call these `seedlings` and `trees` for reasons that will soon become evident. 
 
 ```{code-cell} ipython3
-island_data = download_data(
-    "https://datadryad.org/stash/downloads/file_stream/55546", "island.xls")
-seedlings = pd.read_excel(island_data, sheet_name = 0)
-trees = pd.read_excel(island_data, sheet_name = 1)
+island_data = "https://cal-icor.github.io/textbook.data/ucb/espm-109/island.xlsx"
+seedlings = pd.read_excel(island_data, sheet_name = 0, engine="openpyxl")
+trees = pd.read_excel(island_data, sheet_name = 1, engine="openpyxl")
 ```
 
 Now, lets explore this data a bit! Below we'll look at what we just downloaded!
