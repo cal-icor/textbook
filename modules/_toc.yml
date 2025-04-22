@@ -22,3 +22,7 @@ parts:
   numbered: true
   chapters:
   - file: psych-167-regression
+- caption: Legal Studies
+  numbered: true
+  chapters:
+  - file: legal-text
