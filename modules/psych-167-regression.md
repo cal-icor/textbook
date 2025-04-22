@@ -35,7 +35,7 @@ In this module, you will look at two **correlated** phenomena and predict unseen
 We will be using data from the online data archive of Prof. Larry Winner of the University of Florida. The file *hybrid* contains data on hybrid passenger cars sold in the United States from 1997 to 2013. In order to analyze the data, we must first **import** it to our Jupyter notebook and **create a table.**
 
 ```{code-cell} ipython3
-hybrid = Table.read_table('http://inferentialthinking.com/notebooks/hybrid.csv')  # Imports the data and creates a table
+hybrid = Table.read_table('https://cal-icor.github.io/textbook.data/ucb/psych-167/hybrid.csv')  # Imports the data and creates a table
 hybrid.show(5)  # Displays the first five rows of the table
 ```
 
