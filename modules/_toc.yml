@@ -17,3 +17,7 @@ parts:
   numbered: true
   chapters:
   - file: data-4ac-intro
+- caption: Psychology
+  numbered: true
+  chapters:
+  - file: psych-167-regression
