@@ -64,7 +64,7 @@ Though the Jupyter Notebook interface has been around only about a decade, the f
 +++
 
 <br>
-<center><img src="https://cal-icor.github.io/textbook.data/data-4ac/mathematica.png" alt="Early Mathematica Interface" style="width: 350px;"></center>
+<center><img src="https://cal-icor.github.io/textbook.data/ucb/data-4ac/mathematica.png" alt="Early Mathematica Interface" style="width: 350px;"></center>
 <center><i>The early Mathematica Interface.</i></center>
 <br>
 
@@ -730,7 +730,7 @@ In most data science contexts, when interacting with data you will be working wi
 **Run the cell below to load a dataset.** We'll be working with this data in a future notebook.
 
 ```{code-cell} ipython3
-prisons = Table.read_table("https://cal-icor.github.io/textbook.data/data-4ac/monthly_cdcr.csv") # Here we see an assignment statement
+prisons = Table.read_table("https://cal-icor.github.io/textbook.data/ucb/data-4ac/monthly_cdcr.csv") # Here we see an assignment statement
 prisons
 ```
 
