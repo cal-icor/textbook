@@ -18,6 +18,13 @@ parts:
   numbered: true
   chapters:
   - file: engin-7-numerical
+- caption: Ethnic Studies
+  numbered: true
+  chapters: covid-prison
+- caption: Biology
+  numbered: true
+  chapters:
+  - file: crispr
 - caption: Data Science
   numbered: true
   chapters:
