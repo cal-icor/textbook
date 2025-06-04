@@ -375,11 +375,9 @@ Congratulations! You're done with this lab! If you are interested in learning mo
 
 +++
 
-**Authors: Monica Wilkinson and Vera Wang**
+### Authors: Monica Wilkinson and Vera Wang
 
-### References:
-
-***
+### References
 
 - http://geopandas.org/mapping.html
 - https://matplotlib.org/users/colormaps.html
