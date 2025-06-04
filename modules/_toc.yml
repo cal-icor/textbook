@@ -35,6 +35,8 @@ parts:
   numbered: true
   chapters:
   - file: ideology
+  - file: election-hypothesis-testing
+  - file: bivariate-regression
 - caption: Legal Studies
   numbered: true
   chapters:
