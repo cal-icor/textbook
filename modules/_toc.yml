@@ -22,10 +22,6 @@ parts:
   numbered: true
   chapters: 
     -file: covid-prisons
-- caption: Biology
-  numbered: true
-  chapters:
-  - file: crispr
 - caption: Data Science
   numbered: true
   chapters:
