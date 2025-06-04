@@ -310,7 +310,7 @@ Note that the code for this map has essentially the same form as the choropleth 
 
 +++
 
-# More geospatial data types in `geopandas`
+## More geospatial data types in `geopandas`
 
 +++
 
