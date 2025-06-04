@@ -646,7 +646,7 @@ grader.check("q3.3")
 
 ```{code-cell} ipython3
 import matplotlib.image as mpimg
-img = mpimg.imread('resources/animal.jpg')
+img = mpimg.imread('https://cal-icor.github.io/textbook.data/ucb/engin-7/animal.jpg')
 imgplot = plt.imshow(img)
 imgplot.axes.get_xaxis().set_visible(False)
 imgplot.axes.get_yaxis().set_visible(False)
