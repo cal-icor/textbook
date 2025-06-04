@@ -2,3 +2,9 @@ jupyter-book
 matplotlib
 numpy
 httpimport
+statsmodels
+pandas
+datascience
+scipy
+scikit-learn
+seaborn

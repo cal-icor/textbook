@@ -34,6 +34,10 @@ parts:
   numbered: true
   chapters:
   - file: psych-167-regression
+- caption: Political Science
+  numbered: true
+  chapters:
+  - file: ideology
 - caption: Legal Studies
   numbered: true
   chapters:
