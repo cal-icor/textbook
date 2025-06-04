@@ -4,21 +4,16 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.17.2
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
 
-# [LEGALST-123] Lab 15: Text Preprocessing
-
----
+# Text Preprocessing
 
 This lab will provide an introduction to manipulating strings and chunking sentences.
-
-
----
 
 ### Topics Covered
 - How to tokenize text
@@ -27,13 +22,13 @@ This lab will provide an introduction to manipulating strings and chunking sente
 
 ### Table of Contents
 
-[The Data](#section data)<br>
+[The Data](#section-data)<br>
 
-1 - [Tokenization](#section 1)<br>
+1 - [Tokenization](#1)<br>
 
-2 - [Stemming](#section 2)<br>
+2 - [Stemming](#section-2)<br>
 
-3 - [Chunking](#section 3)<br>
+3 - [Chunking](#section-3)<br>
 
 ```{code-cell} ipython3
 !pip install nltk svgling
@@ -64,7 +59,7 @@ data = pd.read_csv("https://cal-icor.github.io/textbook.data/ucb/legal-123/un-ge
 data.head()
 ```
 
-## Tokenization  <a id='section 1'></a>
+## Tokenization  <a id='1'></a>
 
 +++
 
@@ -189,7 +184,7 @@ Now our analysis is much more informational and revealing.
 
 +++
 
-## Stemming <a id='section 2'></a>
+## Stemming <a id='2'></a>
 
 +++
 
@@ -237,7 +232,7 @@ Your answer here
 
 +++
 
-## Chunking<a id='section 3'></a>
+## Chunking<a id='3'></a>
 
 +++
 

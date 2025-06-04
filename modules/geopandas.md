@@ -11,8 +11,8 @@ kernelspec:
   name: python3
 ---
 
-# Introduction to GeoPandaa
----
+# Introduction to GeoPandas
+
 Today we are going to learn how to use python and Jupyter notebooks to learn the basics of working with geospatial data in `geopandas`. `geopandas` is built on top of the `pandas` package you saw in the previous lab. Many of the methods you will see in this lab are shared between the two packages.
 
 ```{code-cell} ipython3
