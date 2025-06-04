@@ -33,7 +33,7 @@ grader = otter.Notebook("game-theory.ipynb")
 
 <!-- BEGIN QUESTION -->
 
-# Project 3: Game Theory and Behavioral Economics
+# Game Theory and Behavioral Economics
 
 <!-- END QUESTION -->
 
