@@ -17,7 +17,7 @@ kernelspec:
 
 # Initialize Otter
 import otter
-grader = otter.Notebook("lab10.ipynb")
+grader = otter.Notebook("engin-7-numerical.ipynb")
 ```
 
 # E7: Numerical Integration and Differentiation
