@@ -20,7 +20,8 @@ parts:
   - file: engin-7-numerical
 - caption: Ethnic Studies
   numbered: true
-  chapters: covid-prison
+  chapters: 
+    -file: covid-prison
 - caption: Biology
   numbered: true
   chapters:
