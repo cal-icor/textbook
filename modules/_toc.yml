@@ -4,11 +4,11 @@
 format: jb-book
 root: intro
 parts:
-- caption: Default Notebooks
+- caption: City Planning
   numbered: true
   chapters:
-  - file: markdown
-  - file: markdown-notebooks
+  - file: geopandas
+  - file: large-datasets
 - caption: Environmental Science, Policy, and Management
   numbered: true
   chapters:
