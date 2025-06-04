@@ -21,7 +21,7 @@ parts:
 - caption: Ethnic Studies
   numbered: true
   chapters: 
-    -file: covid-prisons
+  - file: covid-prisons
 - caption: Data Science
   numbered: true
   chapters:
