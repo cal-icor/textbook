@@ -42,6 +42,10 @@ parts:
   numbered: true
   chapters:
   - file: psych-167-regression
+- caption: Cognitive Science
+  numbered: true
+  chapters:
+  - file: brain-vs-ml
 - caption: Political Science
   numbered: true
   chapters:
