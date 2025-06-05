@@ -14,6 +14,7 @@ parts:
   chapters:
   - file: game-theory
   - file: econometrics
+  - file: survival-analysis
 - caption: Environmental Science, Policy, and Management
   numbered: true
   chapters:
