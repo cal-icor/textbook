@@ -33,7 +33,7 @@ pd.set_option('display.max_columns', None);
 plt.figure(figsize=(12, 6));
 ```
 
-# Lab 8: Survival Analysis
+# Survival Analysis
 
 +++
 
