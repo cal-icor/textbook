@@ -434,7 +434,7 @@ The chapter is quite lengthy, and we don't expect you to read it thoroughly. Ins
 
 <!-- END QUESTION -->
 -------------------------
-# Congratulations! You Have Completed Notebook 2.
+## Congratulations! You Have Completed Notebook 2.
 
 We hope this notebook gave you a fun and interesting look into different data analysis and visualization techniques for exploring HIV and AIDS data. In the final two notebooks, we'll be exploring and asking questions about other medical data. Below, you will find instructions on how to generate a PDF of your written responses to submit!
 

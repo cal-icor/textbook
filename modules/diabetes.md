@@ -405,7 +405,7 @@ This was a short introduction to some of the most interesting and useful feature
 
 <!-- END QUESTION -->
 -------------------------
-# Congratulations! You Have Completed Notebook 3.
+## Congratulations! You Have Completed Notebook 3.
 
 We hope this notebook gave you a fun and interesting look into different data analysis and visualization techniques for exploring diabetes data. In the final notebook, we'll be exploring and asking questions about substance use epidemiology. Below, you will find instructions on how to generate a PDF of your written responses to submit!
 
