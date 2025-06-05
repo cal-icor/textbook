@@ -28,6 +28,12 @@ parts:
   numbered: true
   chapters: 
   - file: covid-prisons
+- caption: Anthropology
+  numbered: true
+  chapters:
+  - file: covid
+  - file: hiv-aids
+  - file: diabetes
 - caption: Data Science
   numbered: true
   chapters:
