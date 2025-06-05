@@ -20,7 +20,7 @@ import otter
 grader = otter.Notebook("engin-7-numerical.ipynb")
 ```
 
-# E7: Numerical Integration and Differentiation
+# Numerical Integration and Differentiation
 
 You must submit the lab to Gradescope by the due date. You will submit the zip file produced by running the final cell of the assignment.
 

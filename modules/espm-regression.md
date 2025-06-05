@@ -67,7 +67,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import statsmodels.formula.api as sm
 ```
 
-# The Data <a id='section_data'></a>
+## The Data <a id='section_data'></a>
 
 We will be using data from the website of the Office of Environmental Health Hazard Assessment. The file includes environmental and population data across different counties of California. In order to analyze the data, we must first import it to our Jupyter notebook and create a table. We will call this table `ces_data`.
 
@@ -98,7 +98,7 @@ difference
 
 ---
 
-# Part I: Review<a id='section_review'></a>
+## Part I: Review<a id='section_review'></a>
 
 We'll provide an overview of the concepts we covered in lecture. If you feel confident about the material on correlation (r), regression and coefficient of determination (r-squared), feel free to skip ahead! It is important to have a solid understanding of these concepts -- they are at the heart of the later parts of this lab. Make sure to ask any questions you have to clarify these concepts so you can get the most out of this lab!
 
@@ -108,7 +108,7 @@ We'll provide an overview of the concepts we covered in lecture. If you feel con
 
 - This lab utilized our Jupyter Notebook skills we developed last week in section. It's a good idea to have the [Introduction to Jupyter Notebook Lab](https://tinyurl.com/y4fru2ro) open for your reference throughout this lab.
 
-## 1. The correlation coefficient - r<a id='subsection_1'></a>
+### 1. The correlation coefficient - r<a id='subsection_1'></a>
 
 You came across this number last time in the lecture notebook. You already know that it's just a number between -1 and 1 that tells you:
 1. **What the relationship between two variables looks like** and 
@@ -133,7 +133,7 @@ We can use our `correlation()` function to calculate the correlation coeffient b
 correlation(clean_ces_data, 'hispanic', 'asthma')
 ```
 
-### Interpreting r
+#### Interpreting r
 So, we get a correlation coefficient of **0.359** from our calculation. What does this value mean regarding the relationship between the concentration of hispanic people and the frequency of asthma attacks in a census tract?
 
 +++
@@ -146,7 +146,7 @@ So, we get a correlation coefficient of **0.359** from our calculation. What doe
 
 +++
 
-### You Try:
+#### You Try:
 
 +++
 
@@ -164,7 +164,7 @@ correlation(...,...,...)
 
 +++
 
-## 2. Prediction Using Simple Linear Regression<a id='subsection_2'></a>
+### 2. Prediction Using Simple Linear Regression<a id='subsection_2'></a>
 
 Linear regression is really just a term for **making predictions using lines**. With two variables, linear regression is just a plain old line:
 
@@ -250,9 +250,9 @@ Conveniently, the `.scatter()` function has a setting that allows us to draw the
 clean_ces_data.scatter("hispanic", "asthma", fit_line=True, alpha = .16, s = 10)
 ```
 
-## 3. Coefficient of Determination (R-Squared)<a id='subsection_3'></a>
+### 3. Coefficient of Determination (R-Squared)<a id='subsection_3'></a>
 
-### How Good is our Predictive Model?
+#### How Good is our Predictive Model?
 
 We know the following:
 * How to assess the relationship between two variables (correlation coefficient)
@@ -277,7 +277,7 @@ For this lab, you are only responsible for **interpreting** the r-squared value.
 
 ---
 
-# Part II: Simple Linear Regression  (from lecture)<a id='section_linreg'></a>
+## Part II: Simple Linear Regression  (from lecture)<a id='section_linreg'></a>
 
 
 This section should be very familiar to you -- it's our example analysis from lecture! The goal of this lab is for you to use the tools we've shown you to conduct your own analysis of variables of your choice. Our focus is not on calculation but on the **interpretation** of graphs and analysis tools (r and r-squared); while you go through these examples, keep in mind the overarching question: **do environmental factors disproportionately affect the health outcomes of minority groups?**
@@ -374,7 +374,7 @@ fit.summary()
 
 ---
 
-# Your Turn!!<a id='subsection_6'></a>
+## Your Turn!!<a id='subsection_6'></a>
 
 Run the cell below to look at all the possible variables available to you to choose from. From this table, choose **one** Health Outcome variable (this will be your Y variable), **one** Environmental Factor Variable, and **one** Race (%) variable. Conduct Simple Regression Analysis of Health Outcome and each of the other two variables, just as we did in the example above.
 
@@ -458,7 +458,7 @@ So you see that linear regression of two variables (X and Y) is really just a li
 
 ---
 
-# Part IV: Multiple Regression: putting it all together <a id='section_multreg'></a>
+## Part IV: Multiple Regression: putting it all together <a id='section_multreg'></a>
 
 Regression isn't limited to just two variables! We saw above that we predicted a `Y` variable based on just one `X` variable. As the name suggests, **Multiple** regression allows us to use more than one `X` variable to predict an outcome. If you know the age of a patient for example, that alone can help predict health outcomes like whether they have cancer: a teenager is less likely to have lung cancer than a 70 year old. But if you had more information on patients, like how many packs of cigarettes they smoke a week, you can imagine that our prediction will be more accurate since it is not solely dependent on age.
 
@@ -522,7 +522,7 @@ It's a little higher! 0.424 is still not the best, but it's certainly better tha
 Let's think about this for a moment. We saw that pollution score by itself does not predict asthma well, and knowing the percent composition of African Americans by itself does not predict asthma well. But, our multiple regression analysis shows that the **combination** of the pollution score and African American composition predicts asthma a lot better: a **higher** pollution score and a **higher** composition of African Americans in a census tract tends to result in a **higher** incidence of asthma. We might infer, then, that pollution more negatively affects African American communities than White communities. Perhaps environmental factors do disproportionately affect African American communities after all.
 
 
-## Your Turn!!
+### Your Turn!!
 
 Recall that in the previous section on Single Linear Regression, you analyzed the relationship between a ethnicity variable and a health outcome variable, and an environmental factor variable and the same health outcome variable.
 
