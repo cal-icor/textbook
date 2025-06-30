@@ -10,4 +10,3 @@ scikit-learn
 seaborn
 geopandas
 shapely
-docutils<0.20
