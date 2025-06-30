@@ -15,7 +15,7 @@ kernelspec:
 
 This lab will provide an introduction to manipulating strings and chunking sentences.
 
-### Topics Covered
+## Topics Covered
 - How to tokenize text
 - How to stem text
 - How to chunk text

@@ -782,7 +782,7 @@ manual: true
 
 In other situations, we will want to sort, filter, or group our data. In order to manipulate our data stored in a table, we will be using various table functions. These will be explained as we go through them as to not overwhelm you!
 
-#### A Note on Tables
+### A Note on Tables
 
 In this notebook, we worked with the [datascience](http://data8.org/datascience/) library to work with tables (which is also used in Data-8). In future courses (such as Data-100) and in industry, you'll most likely use [pandas](https://pandas.pydata.org/) to manipulate tabular data. The datascience library is more user friendly, but pandas is more powerful overall. In this course, we'll use both.
 
@@ -857,7 +857,7 @@ manual: true
 
 <!-- END QUESTION -->
 
-#### Feedback Survey
+### Feedback Survey
 
 Please consider filling out this [survey](https://docs.google.com/forms/d/e/1FAIpQLScd1q8VqvOMuVvLfhbVswckYKg1HFVwVu_bTF5NWbVZr4qWhw/viewform?usp=sf_link) to help us improve this module.
 

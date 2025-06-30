@@ -67,7 +67,7 @@ Let's subset the data so that we're only looking at SUVs. Use what you learned i
 
 ---
 
-### The correlation coefficient - *r*
+## The correlation coefficient - *r*
 
 > The correlation coefficient ranges from −1 to 1. A value of 1 implies that a linear equation describes the relationship between X and Y perfectly, with all data points lying on a line for which Y increases as X increases. A value of −1 implies that all data points lie on a line for which Y decreases as X increases. A value of 0 implies that there is no linear correlation between the variables. ~Wikipedia
 

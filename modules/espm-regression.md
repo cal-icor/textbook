@@ -25,7 +25,7 @@ If you feel comfortable with the concepts we covered in lecture, feel free to sk
 
 
 
-### Table of Contents
+## Table of Contents
 
 [The Data](#section_data)
 

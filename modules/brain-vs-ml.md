@@ -28,7 +28,7 @@ kernelspec:
 
 +++ {"tags": ["ignore"]}
 
-### Topics Covered 
+## Topics Covered 
 Welcome! This lab will be an introduction to Big Data and the Human Brain as well as a gentle introduction to Jupyter Notebooks. By the end of this lab you will be able to: 
 1. Define _Big Data_ and _dimensions_ in reference to a dataset.
 2. Explain the high-level steps of simple computer facial recognition.

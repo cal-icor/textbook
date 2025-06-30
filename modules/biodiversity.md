@@ -96,7 +96,7 @@ print("\N{grinning face}")
 ## Part 1: Python basics <a id='basics'></a>
 Before getting into the more high level analyses we will do on the GBIF and Cal-Adapt data, we need to cover a few of the foundational elements of programming in Python.
 
-#### A. Expressions
+### A. Expressions
 The departure point for all programming is the concept of the __expression__. An expression is a combination of variables, operators, and other Python elements that the language interprets and acts upon. Expressions act as a set of instructions to be fed through the interpreter, with the goal of generating specific outcomes. See below for some examples of basic expressions. Keep in mind that most of these just map to your understanding of mathematical expressions:
 
 ```{code-cell} ipython3
@@ -616,7 +616,7 @@ Question: Searching and mapping multiple species can be useful. Which species wo
 
 ```
 
-#### ---
+### ---
 
 ## Part 4: Cal-Adapt API<a id='adapt'></a>
 <a target=_blank href="https://calphotos.berkeley.edu/cgi/img_query?enlarge=0000+0000+0715+1756"> ![California Damsels dragonfly](https://calphotos.berkeley.edu/imgs/128x192/0000_0000/0715/1756.jpeg)</a>Let's work with California Damsels dragonfly (*Argia agrioides*) data from the GBIF API and climate data from Cal-Adapt. (image from CalPhotos)

@@ -22,7 +22,7 @@ grader = otter.Notebook("meteorology-intro.ipynb")
 
 # Module 1: Intro to Weather and Climate!
 
-### Welcome to `GEOG/ERTH 152`
+## Welcome to `GEOG/ERTH 152`
 
 In this interactive notebook, we will work as geographical data scientists who would like to answer questions, learn and/or make predictions by looking at data. The first step in this quest is to look at collected data, visualize the data and observe. This will bring up all kinds of questions.
 
@@ -39,7 +39,7 @@ We will ...
 
 +++
 
-# 1. What is a Jupyter notebook?
+## 1. What is a Jupyter notebook?
 This webpage is called a Jupyter notebook. A notebook is a place to write code and view their results, and also to write text.
 In a notebook, each rectangle containing text or code is called a *cell*.
 
@@ -90,7 +90,7 @@ def createMap(locationInit, zoomInit, marker1Location, marker1Name, marker2Locat
 from IPython.display import YouTubeVideo
 ```
 
-# 2. Weather vs. Climate 
+## 2. Weather vs. Climate 
 <img src="https://cal-icor.github.io/textbook.data/sbcc/erth-152/weather_climate.jpg" alt="drawing" width="800" height="100"/>
 
 (Image credit: iStock) [link](http://www.noaa.gov/news/new-us-climate-normals-are-here-what-do-they-tell-us-about-climate-change)

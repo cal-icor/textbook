@@ -22,7 +22,7 @@ grader = otter.Notebook("geography-intro.ipynb")
 
 # Module 1: Intro to Human Geography!
 
-### Welcome to `GEOG 102`
+## Welcome to `GEOG 102`
 
 In this interactive notebook, we will work as geographic data scientists. A data scientist looks at data, asks questions, synthesizes and analyzes hypothesis', and makes predictions. The first step in this quest is to look at collected data, visualize the data, and observe. This will (hopefully) bring up all kinds of questions.
 
@@ -40,7 +40,7 @@ We will ...
 
 +++
 
-# 1. What is a Jupyter notebook?
+## 1. What is a Jupyter notebook?
 This webpage is called a Jupyter notebook. A notebook is a place to write code and view their results, and also to write text.
 In a notebook, each rectangle containing text or code is called a *cell*.
 
@@ -93,12 +93,12 @@ def createMap(locationInit, zoomInit, marker1Location, marker1Name, marker2Locat
 from IPython.display import YouTubeVideo
 ```
 
-# 2. Comparing 2 locations and their colonial history
+## 2. Comparing 2 locations and their colonial history
 Before you continue, make sure to review the following 2 lectures:
 - Regional economic growth lecture! 
 - Uneven economic development lecture: Haiti
 
-# 2.1 Maps
+## 2.1 Maps
 In this section we will start with a map. We will look at the 2 first colonies in the Americas that become independent and their location. We will compare the difference in their geographies in terms of latitude, longitude and climate, and discuss how this affected who settled there. 
 In this section, we will look at how the location of the 2 first colonies in the Americas that become independent and their location: **The 13 colonies (early USA)** and **Haiti**. 
 
@@ -181,7 +181,7 @@ projection = ...
 grader.check("q23")
 ```
 
-# 2.2 Uneven Regional Economic Growth - USA versus Haiti
+## 2.2 Uneven Regional Economic Growth - USA versus Haiti
 
 In lecture, we have discussed the story of Haiti and the uneven economic development during and after colonization. Let's look explore data and compare Haiti and the USA by looking at merchandise export over the years. Do we see the same growth? Are their any data that stands out? Why?
 

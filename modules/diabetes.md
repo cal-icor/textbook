@@ -33,7 +33,7 @@ Image Source: [YaleNews](https://news.yale.edu/2020/02/04/studies-suggest-new-pa
 +++
 
 
-### Learning Outcomes
+## Learning Outcomes
 
 In this notebook, you will learn about:
 - The History and Context of Diabetes Data

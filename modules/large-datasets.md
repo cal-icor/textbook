@@ -124,7 +124,7 @@ In our dataframe, the temporal information is stored as **strings**, but for Pyt
 When we run the following code, we can see that the individual dates are currently stored as strings.
 
 ```{code-cell} ipython3
-# Run this
+## Run this
 print(tweets['date'][0])
 print(type(tweets['date'][0]))
 ```
@@ -185,7 +185,7 @@ print(type(tweets['date'][0]))
 ```
 
 ```{code-cell} ipython3
-# Run this
+## Run this
 tweets.head()
 ```
 
@@ -442,7 +442,7 @@ plt.axis(...);
 These are by no means the only visualizations you can create with the ```combined``` dataset. In the cell below, create your own visualization! 
 
 ```{code-cell} ipython3
-# Your own visualization here
+## Your own visualization here
 ```
 
 ## Feedback form

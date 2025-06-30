@@ -32,7 +32,7 @@ Image Source: [City of Philadelphia](https://www.phila.gov/2021-12-20-free-rapid
 
 +++
 
-### Learning Outcomes
+## Learning Outcomes
 
 In this notebook, you will learn about:
 - Navigating a Jupyter Notebook: Acquire skills to effectively navigate, run cells, and save your work in a Jupyter Notebook.
@@ -195,7 +195,7 @@ Because you will not be doing any coding of your own in these notebooks, you sho
 
 ### Common errors and how to fix them
 
-##### Accidentally deleted something in a cell? 
+#### Accidentally deleted something in a cell? 
 Double click on that cell and press `Ctrl+Z` or `Command+Z` until you recover the deleted information.
 
 ##### Getting a really long error message? 

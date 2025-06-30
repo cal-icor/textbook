@@ -62,7 +62,7 @@ def createMap(locationInit, zoomInit, marker1Location, marker1Name, marker2Locat
 from IPython.display import YouTubeVideo
 ```
 
-# 1 Climate Change
+## 1 Climate Change
 
 +++
 
@@ -233,7 +233,7 @@ _Type your answer here, replacing this text._
 
 <!-- END QUESTION -->
 
-# 2. Carbon Dioxide: an important and rapidly increasing greenhouse gas
+## 2. Carbon Dioxide: an important and rapidly increasing greenhouse gas
 In this section, we will look at:
 - monthly variations in CO2 values over 1 year
 - CO2 values variations over 15 years

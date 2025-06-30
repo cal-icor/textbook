@@ -34,11 +34,11 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 ```
 
-### 1. Reading in the Stata File
+## 1. Reading in the Stata File
 
 +++
 
-#### Question 1.1
+### Question 1.1
 
 Read in the Stata dta file `rd_analysis_hs.dta` into a pandas dataframe with the name: `turnout`. You might find looking at [the documentation](https://pandas.pydata.org/docs/reference/api/pandas.read_stata.html) helpful.
 

@@ -57,7 +57,7 @@ covid_in_prisons
 
 +++ {"cell_id": "8f488392c61e4d468ac3e2dc785110c5", "deepnote_cell_type": "text-cell-h3", "is_collapsed": false}
 
-### About the Data
+## About the Data
 
 +++ {"cell_id": "1fdeb83d60044e65abdc6265d52a563f", "deepnote_cell_height": 169.984375, "deepnote_cell_type": "markdown"}
 
