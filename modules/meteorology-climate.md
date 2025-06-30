@@ -20,7 +20,7 @@ import otter
 grader = otter.Notebook("meteorology-climate.ipynb")
 ```
 
-# Module 2: Climate Change and Causes
+# Climate Change and Causes
 
 This activity's goal is to review some of the material presented in the videos and lectures of module 2 by:
 - Importing data collected by NOAA

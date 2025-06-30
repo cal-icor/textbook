@@ -20,7 +20,7 @@ import otter
 grader = otter.Notebook("geography-intro.ipynb")
 ```
 
-# Module 1: Intro to Human Geography!
+# Intro to Human Geography!
 
 ## Welcome to `GEOG 102`
 

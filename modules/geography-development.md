@@ -20,7 +20,7 @@ import otter
 grader = otter.Notebook("geography-development.ipynb")
 ```
 
-# Module 2: Development Geographies!
+# Development Geographies!
 
 The goal of this activity is to review some of the material presented as part of module 2 by considering data from the Food and Agriculture Organization (FAO) of the United Nations.
 We will look at data from different continents in order to ...

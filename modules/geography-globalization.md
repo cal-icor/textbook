@@ -35,7 +35,7 @@ plt.style.use('fivethirtyeight')
 from IPython.display import YouTubeVideo
 ```
 
-# Module 3: Globalization & Agriculture
+# Globalization & Agriculture
 
 This activity’s goal is to review some of the material presented in the videos and lectures of module 3. In this section, we will be looking at data from the Food and Agriculture Organization (FAO) of the United Nations. Food globalization isn't new, as long as people have been cooking, they’ve searched for exciting ingredients. As a result of trade agreements, and the industrialization of food production, the availability of food is now more impacted by economy than what you can grow in your region. According to the US food and drug administration, 55% of fruits and vegetables are produced abroad. Meaning, if our relationship with China goes south, our access to apples will be cut off (90% of apples consumed in the US are grown in China).
 

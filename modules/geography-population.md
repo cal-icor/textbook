@@ -36,7 +36,7 @@ from IPython.display import YouTubeVideo
 from ipywidgets import interact, interactive, fixed, interact_manual
 ```
 
-# Module 4: Population
+# Population
 
 <img src="https://cal-icor.github.io/textbook.data/sbcc/geog-102/PopulationDensity.jpg" alt="drawing" width="400" height="200"/>
 

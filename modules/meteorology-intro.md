@@ -20,7 +20,7 @@ import otter
 grader = otter.Notebook("meteorology-intro.ipynb")
 ```
 
-# Module 1: Intro to Weather and Climate!
+# Intro to Weather and Climate!
 
 ## Welcome to `GEOG/ERTH 152`
 
