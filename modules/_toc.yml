@@ -67,5 +67,6 @@ parts:
   - file: ucb/bivariate-regression
 - caption: Legal Studies
   numbered: true
+
   chapters:
   - file: ucb/legal-text
