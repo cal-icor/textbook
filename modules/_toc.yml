@@ -7,24 +7,24 @@ parts:
 - caption: City Planning
   numbered: true
   chapters:
-  - file: ucb/geopandas
-  - file: ucb/large-datasets
+  - file: geopandas
+  - file: large-datasets
 - caption: Economics
   numbered: true
   chapters:
-  - file: ucb/game-theory
-  - file: ucb/econometrics
-  - file: ucb/survival-analysis
+  - file: game-theory
+  - file: econometrics
+  - file: survival-analysis
 - caption: Environmental Science, Policy, and Management
   numbered: true
   chapters:
-  - file: ucb/biodiversity
-  - file: ucb/espm-regression
-  - file: ucb/espm-island
+  - file: biodiversity
+  - file: espm-regression
+  - file: espm-island
 - caption: Engineering
   numbered: true
   chapters:
-  - file: ucb/engin-7-numerical
+  - file: engin-7-numerical
 - caption: Ethnic Studies
   numbered: true
   chapters: 
@@ -32,39 +32,39 @@ parts:
 - caption: Geography
   numbered: true
   chapters:
-  - file: sbcc/geography-intro
-  - file: sbcc/geography-development
-  - file: sbcc/geography-population
-  - file: sbcc/geography-globalization
+  - file: geography-intro
+  - file: geography-development
+  - file: geography-population
+  - file: geography-globalization
 - caption: Meteorology
   numbered: true
   chapters:
-  - file: sbcc/meteorology-intro
-  - file: sbcc/meteorology-climate
+  - file: meteorology-intro
+  - file: meteorology-climate
 - caption: Anthropology
   numbered: true
   chapters:
-  - file: ucb/covid
-  - file: ucb/hiv-aids
-  - file: ucb/diabetes
+  - file: covid
+  - file: hiv-aids
+  - file: diabetes
 - caption: Data Science
   numbered: true
   chapters:
-  - file: ucb/data-4ac-intro
+  - file: data-4ac-intro
 - caption: Psychology
   numbered: true
   chapters:
-  - file: ucb/psych-167-regression
+  - file: psych-167-regression
 - caption: Cognitive Science
   numbered: true
   chapters:
-  - file: ucb/brain-vs-ml
+  - file: brain-vs-ml
 - caption: Political Science
   numbered: true
   chapters:
-  - file: ucb/ideology
-  - file: ucb/election-hypothesis-testing
-  - file: ucb/bivariate-regression
+  - file: ideology
+  - file: election-hypothesis-testing
+  - file: bivariate-regression
 - caption: Legal Studies
   numbered: true
 
