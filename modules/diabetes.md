@@ -197,9 +197,14 @@ As we can see from the table above, there are only three categories in which the
 
 <!-- BEGIN QUESTION -->
 <div class="alert alert-warning">
-
-### Question 2.1:
-**What do you think the purpose is of including education level as a characteristic of these individuals? What would the education level likely be representing about the individuals diagnosed with Type 2 diabetes? What harmful implications or generalizations could this representation cause?**
+    <h3>
+        Question 2.1:
+    </h3>
+    <p>
+        <b>
+            What do you think the purpose is of including education level as a characteristic of these individuals? What would the education level likely be representing about the individuals diagnosed with Type 2 diabetes? What harmful implications or generalizations could this representation cause?
+        </b>
+    </p>
 </div>
 
 +++
@@ -303,9 +308,14 @@ From this graph, we can see immediately that there is a discrepancy in the Type 
 
 <!-- BEGIN QUESTION -->
 <div class="alert alert-warning">
-
-### Question 3.1:
-**Do a bit of research into the rates of Type 2 diabetes in the different regions of the United States, and see if you can find any factors that may be contributing to this discrepancy. Why is it important for us to be considering how certain areas of the United States are more affected by a medical condition than others?**
+    <h3>
+        Question 3.1:
+    </h3>
+    <p>
+        <b>
+            Do a bit of research into the rates of Type 2 diabetes in the different regions of the United States, and see if you can find any factors that may be contributing to this discrepancy. Why is it important for us to be considering how certain areas of the United States are more affected by a medical condition than others?
+        </b>
+    </p>
 </div>
 
 +++
@@ -392,9 +402,14 @@ This was a short introduction to some of the most interesting and useful feature
 
 <!-- BEGIN QUESTION -->
 <div class="alert alert-warning">
-
-### Question 4.1:
-**Summarize any interesting results that you found from exploring Google Trends. You can talk about any queries you tried, which terms resulted in higher percentages than you expected, which terms resulted in lower percentages that you thought might result in more, or anything else that you found interesting while looking through the trends!**
+    <h3>
+        Question 4.1:
+    </h3>
+    <p>
+        <b>
+            Summarize any interesting results that you found from exploring Google Trends. You can talk about any queries you tried, which terms resulted in higher percentages than you expected, which terms resulted in lower percentages that you thought might result in more, or anything else that you found interesting while looking through the trends!
+        </b>
+    </p>
 </div>
 
 +++
@@ -443,8 +458,14 @@ display(HTML("<p style='font-size:20px'> <br>Save this notebook, then click <a h
 +++
 
 <div class="alert alert-info">
-<b> We encourage student to fill out the following feedback form to share your experience with this Module notebook. This feedback form will take no longer than 5 minutes. At UC Berkeley Data Science Undergraduate Studies Modules, we appreciate all feedback to improve the learning of students and experience utilizing Jupyter Notebooks for Data Science Education: </b> 
+    <p>
+        <b>
+            We encourage student to fill out the following feedback form to share your experience with this Module notebook. This feedback form will take no longer than 5 minutes. At UC Berkeley Data Science Undergraduate Studies Modules, we appreciate all feedback to improve the learning of students and experience utilizing Jupyter Notebooks for Data Science Education:
+        </b>
+    </p>
 </div>
+
++++
 
 ## [UC Berkeley Data Science Feedback Form](https://forms.gle/hPgYMxFWKXH2sVkd7)
 

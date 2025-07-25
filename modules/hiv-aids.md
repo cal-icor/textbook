@@ -240,9 +240,14 @@ Now that our data has been cleaned and manipulated for us to use in our analysis
 
 <!-- BEGIN QUESTION -->
 <div class="alert alert-warning">
-
-### Question 4.1:
-**Before we begin looking at visualizations of our data, what kind of general trends in cases and deaths do you expect to see over time and across different sexes? You can utilize the information we discussed in Section 1, or you can do your own research / use your own knowledge! You don't need to be too specific or do a lot of research on it -- this question is just meant to reflect your initial intuition.**
+    <h3>
+        Question 4.1:
+    </h3>
+    <p>
+        <b>
+            Before we begin looking at visualizations of our data, what kind of general trends in cases and deaths do you expect to see over time and across different sexes? You can utilize the information we discussed in Section 1, or you can do your own research / use your own knowledge! You don't need to be too specific or do a lot of research on it -- this question is just meant to reflect your initial intuition.
+        </b>
+    </p>
 </div>
 
 +++
@@ -281,9 +286,14 @@ plt.title("Global Number of Yearly AIDS Deaths from 1979 - 2018", fontsize = 17)
 
 <!-- BEGIN QUESTION -->
 <div class="alert alert-warning">
-
-### Question 4.2:
-**The graphs above for number of global cases and number of global deaths are a bit different in some periods and quite similar in others. What similarities or differences do you notice between the two graphs? Also, if you have any ideas as to what may have caused these similarities or differences, feel free to discuss them as well.**
+    <h3>
+        Question 4.2:
+    </h3>
+    <p>
+        <b>
+            The graphs above for number of global cases and number of global deaths are a bit different in some periods and quite similar in others. What similarities or differences do you notice between the two graphs? Also, if you have any ideas as to what may have caused these similarities or differences, feel free to discuss them as well.
+        </b>
+    </p>
 </div>
 
 +++
@@ -327,9 +337,14 @@ As we could have assumed, the number of AIDS cases for males in this dataset is 
 
 <!-- BEGIN QUESTION -->
 <div class="alert alert-warning">
-
-### Question 4.3:
-**What kind of trends of AIDS cases or deaths might you expect to find or be interested in taking a look at if we had more data available in this dataset? This question is meant to be more open-ended -- there is no right or wrong answer.**
+    <h3>
+        Question 4.3:
+    </h3>
+    <p>
+        <b>
+            What kind of trends of AIDS cases or deaths might you expect to find or be interested in taking a look at if we had more data available in this dataset? This question is meant to be more open-ended -- there is no right or wrong answer.
+        </b>
+    </p>
 </div>
 
 +++
@@ -421,9 +436,14 @@ The chapter is quite lengthy, and we don't expect you to read it thoroughly. Ins
 
 <!-- BEGIN QUESTION -->
 <div class="alert alert-warning">
-
-### Question 4.4:
-**In a few sentences, discuss what you found most interesting, surprising, or concerning in the chapter. You can mention any data tables with unexpected figures, visualizations that captured your interest, or statements that provided deeper insight into the economic burden these countries faced due to HIV/AIDS.**
+    <h3>
+        Question 4.4:
+    </h3>
+    <p>
+        <b>
+            In a few sentences, discuss what you found most interesting, surprising, or concerning in the chapter. You can mention any data tables with unexpected figures, visualizations that captured your interest, or statements that provided deeper insight into the economic burden these countries faced due to HIV/AIDS.
+        </b>
+    </p>
 </div>
 
 +++
@@ -472,8 +492,14 @@ display(HTML("<p style='font-size:20px'> <br>Save this notebook, then click <a h
 +++
 
 <div class="alert alert-info">
-<b> We encourage student to fill out the following feedback form to share your experience with this Module notebook. This feedback form will take no longer than 5 minutes. At UC Berkeley Data Science Undergraduate Studies Modules, we appreciate all feedback to improve the learning of students and experience utilizing Jupyter Notebooks for Data Science Education: </b> 
+    <p>
+        <b>
+            We encourage student to fill out the following feedback form to share your experience with this Module notebook. This feedback form will take no longer than 5 minutes. At UC Berkeley Data Science Undergraduate Studies Modules, we appreciate all feedback to improve the learning of students and experience utilizing Jupyter Notebooks for Data Science Education:
+        </b>
+    <p>
 </div>
+
++++
 
 ## [UC Berkeley Data Science Feedback Form](https://forms.gle/hPgYMxFWKXH2sVkd7)
 
