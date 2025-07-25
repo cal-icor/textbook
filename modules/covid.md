@@ -13,7 +13,7 @@ kernelspec:
 
 # An Introduction to Data Analysis with COVID-19 Data
 
-<br>
+---
 
 **Estimated Time:** 45-60 minutes <br>
 **Notebook Developed By:** Lan Dinh, Reynolds Zhang, Amisha Gupta, Manaar Salama <br>
@@ -24,7 +24,7 @@ Welcome! This notebook will provide a gentle introduction to Python (a coding la
 
 <figure>
     <img src="https://cal-icor.github.io/textbook.data/ucb/anthro-115/covid19-header.jpg" alt="Covid-19 Test" width=600 height=400 />
-    </figure>
+</figure>
 
 +++
 
@@ -508,9 +508,14 @@ Here we have provided the first short-answer questions! As specified at the top 
 
 <!-- BEGIN QUESTION -->
 <div class="alert alert-warning">
-
-### Question 5.1:
-**After exploring the visualizations above, discuss some of your findings. What trends among the selected countries were most interesting to you? Were there any trends in cumulative cases that particularly surprised you? Consider researching what the different preventative measures for slowing the spread of COVID-19 looked like in each country where you see increases or decreases in cases. Does your research match up with what you see in the graphs?**
+    <h3>
+        Question 5.1:
+    </h3>
+    <p>
+        <b>
+            After exploring the visualizations above, discuss some of your findings. What trends among the selected countries were most interesting to you? Were there any trends in cumulative cases that particularly surprised you? Consider researching what the different preventative measures for slowing the spread of COVID-19 looked like in each country where you see increases or decreases in cases. Does your research match up with what you see in the graphs?
+        </b>
+    </p>
 </div>
 
 +++
@@ -521,10 +526,16 @@ Here we have provided the first short-answer questions! As specified at the top 
 
 <!-- END QUESTION -->
 <!-- BEGIN QUESTION -->
-<div class="alert alert-warning">
 
-### Question 5.2:
-**Aside from the changing measures taken by governments of these countries at different points in time, what do you think could be some causes of bias or inaccuracies in our data of confirmed COVID-19 cases? How might this data inaccurately reflect the actual number of COVID cases?**
+<div class="alert alert-warning">
+    <h3>
+        Question 5.2:
+    </h3>
+    <p>
+        <b>
+            Aside from the changing measures taken by governments of these countries at different points in time, what do you think could be some causes of bias or inaccuracies in our data of confirmed COVID-19 cases? How might this data inaccurately reflect the actual number of COVID cases?
+        </b>
+    </p>
 </div>
 
 +++
@@ -544,10 +555,16 @@ Now, let's do some exploration into the patients' demographics of COVID-19 hospi
 +++
 
 <!-- BEGIN QUESTION -->
-<div class="alert alert-warning">
 
-### Question 6.1:
-**Based on your prior knowledge / experience, out of the categories `Age Group`, `Sex`, and `Race/Ethnicity`, which do you expect to see a noticeable discrepancy in rates of COVID-19 cases? You can select multiple categories. Provide a small justification for each category you select.**
+<div class="alert alert-warning">
+    <h3>
+        Question 6.1:
+    </h3>
+    <p>
+        <b>
+            Based on your prior knowledge / experience, out of the categories <code>Age Group</code>, <code>Sex</code>, and <code>Race/Ethnicity</code>, which do you expect to see a noticeable discrepancy in rates of COVID-19 cases? You can select multiple categories. Provide a small justification for each category you select.
+        </b>
+    </p>
 </div>
 
 +++
@@ -632,10 +649,16 @@ The information in the cells above will be useful for demonstrating how many uni
 +++
 
 <!-- BEGIN QUESTION -->
-<div class="alert alert-warning">
 
-### Question 6.2:
-**What are some ways in which this data, primarily the `Sex` and `Race/Ethnicity` categories, are poorly collected and categorized? How do these categories misrepresent or fail to represent individuals? If you were in charge of collecting data for COVID-19 hospitalizations, how would you change the approach to collecting data on these types of demographics in order to better include and represent all of the patients?**
+<div class="alert alert-warning">
+    <h3>
+        Question 6.2:
+    </h3>
+    <p>
+        <b>
+            What are some ways in which this data, primarily the <code>Sex</code> and <code>Race/Ethnicity</code> categories, are poorly collected and categorized? How do these categories misrepresent or fail to represent individuals? If you were in charge of collecting data for COVID-19 hospitalizations, how would you change the approach to collecting data on these types of demographics in order to better include and represent all of the patients?
+        </b>
+    </p>
 </div>
 
 +++
@@ -707,10 +730,16 @@ plt.title('Weekly Rate of COVID-19 Hospitalizations \n Categorized by Race/Ethni
 ```
 
 <!-- BEGIN QUESTION -->
-<div class="alert alert-warning">
 
-### Question 6.3:
-**What discrepancies do you notice in the above graphs when looking at COVID-19 hospitalizations grouped by `Race/Ethnicity`? Do you see any trends that are particularly surprising to you? Or any trends that you had guessed would be the case in Question 6.1?**
+<div class="alert alert-warning">
+    <h3>
+        Question 6.3:
+    </h3>
+    <p>
+        <b>
+            What discrepancies do you notice in the above graphs when looking at COVID-19 hospitalizations grouped by <code>Race/Ethnicity</code>? Do you see any trends that are particularly surprising to you? Or any trends that you had guessed would be the case in Question 6.1?
+        </b>
+    </p>
 </div>
 
 +++
@@ -781,9 +810,14 @@ interact(plot_by_site, site = dropdown);
 
 <!-- BEGIN QUESTION -->
 <div class="alert alert-warning">
-    
-### Question 6.4:
-**What discrepancies do you notice in the above graphs when looking at COVID-19 hospitalizations grouped by `Age group`? Do you see any trends that are particularly surprising to you?**
+    <h3>
+        Question 6.4:
+    </h3>
+    <p>
+        <b>
+            What discrepancies do you notice in the above graphs when looking at COVID-19 hospitalizations grouped by <code>Age group</code>? Do you see any trends that are particularly surprising to you?
+        </b>
+    </p>
 </div>
 
 +++
@@ -795,9 +829,14 @@ interact(plot_by_site, site = dropdown);
 <!-- END QUESTION -->
 <!-- BEGIN QUESTION -->
 <div class="alert alert-warning">
-
-### Question 6.5:
-**If you had access to more data or demographics regarding the hospitalizations of COVID-19 cases, what would you like to explore? What trends might you expect to find?**
+    <h3>
+        Question 6.5:
+    </h3>
+    <p>
+        <b>
+            If you had access to more data or demographics regarding the hospitalizations of COVID-19 cases, what would you like to explore? What trends might you expect to find?
+        </b>
+    </p>
 </div>
 
 +++
@@ -847,8 +886,14 @@ display(HTML("<p style='font-size:20px'> <br>Save this notebook, then click <a h
 +++
 
 <div class="alert alert-info">
-<b> We encourage student to fill out the following feedback form to share your experience with this Module notebook. This feedback form will take no longer than 5 minutes. At UC Berkeley Data Science Undergraduate Studies Modules, we appreciate all feedback to improve the learning of students and experience utilizing Jupyter Notebooks for Data Science Education: </b> 
+    <p>
+        <b> 
+            We encourage student to fill out the following feedback form to share your experience with this Module notebook. This feedback form will take no longer than 5 minutes. At UC Berkeley Data Science Undergraduate Studies Modules, we appreciate all feedback to improve the learning of students and experience utilizing Jupyter Notebooks for Data Science Education:
+        </b> 
+    </p>
 </div>
+
++++
 
 ### [UC Berkeley Data Science Feedback Form](https://forms.gle/hPgYMxFWKXH2sVkd7)
 
