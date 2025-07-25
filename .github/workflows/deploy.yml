@@ -24,9 +24,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
-          pip install -r modules/requirements.txt
-          pip install --upgrade jupyter-book
+          pip install -U jupyter-book
+          # optional: project-specific deps
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Cache executed notebooks
         uses: actions/cache@v3
