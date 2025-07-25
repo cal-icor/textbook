@@ -22,9 +22,7 @@ Welcome! This notebook will provide a gentle introduction to Python (a coding la
 
 +++
 
-<figure>
-    <img src="https://cal-icor.github.io/textbook.data/ucb/anthro-115/covid19-header.jpg" alt="Covid-19 Test" width=600 height=400 />
-</figure>
+![Covid-19 Test](https://cal-icor.github.io/textbook.data/ucb/anthro-115/covid19-header.jpg)
 
 +++
 
