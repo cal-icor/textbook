@@ -30,6 +30,8 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  extra_css:
+     - _static/custom.scss
 
 sphinx:
   extra_extensions: [sphinx_multitoc_numbering, sphinxext.rediraffe, sphinx_tojupyter, sphinx_exercise, sphinx_togglebutton]
@@ -54,8 +56,8 @@ sphinx:
       index_toc.md: intro.md
     tojupyter_static_file_path: ["source/_static", "_static"]
     tojupyter_target_html: true
-    tojupyter_urlpath: "https://python-programming.quantecon.org/"
-    tojupyter_image_urlpath: "https://python-programming.quantecon.org/_static/"
+    tojupyter_urlpath: "https://cal-icor.org/"
+    tojupyter_image_urlpath: "https://cal-icor.org/_static/"
     tojupyter_lang_synonyms: ["ipython", "ipython3", "python"]
     tojupyter_kernels:
       python3:

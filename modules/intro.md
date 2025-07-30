@@ -8,7 +8,7 @@ To contribute to this collection, please submit a pull request to [textbook.note
 
 ## Use
 
-While browsing the available notebooks, this site allows for static viewing of the notebooks. For additional interaction, you can view the toolbar in the top right corner of the screen. The play icon will allow you to launch the notebook in your format of choice, either on a private Jupyter Hub (e.g. [jupyter.cal-icor.org](https://jupyter.cal-icor.org), [datahub.berkeley.edu](https://datahub.berkeley.edu), etc.) or a public/free resource like [Colab](https://colab.research.google.com/) or [BinderHub](https://binderhub.readthedocs.io/en/latest/). 
+While browsing the available notebooks, this site allows for static viewing of the notebooks. For additional interaction, you can view the toolbar in the top right corner of the screen. The play icon will allow you to launch the notebook in your format of choice, either on a private Jupyter Hub (e.g. [jupyter.cal-icor.org](https://jupyter.cal-icor.org), [datahub.berkeley.edu](https://datahub.berkeley.edu), etc.) or a public/free resource like [Colab](https://colab.research.google.com/) or [BinderHub](https://binderhub.readthedocs.io/en/latest/).
 
 You can also download a PDF of the notebook by clicking on the page icon or view the source of the site by clicking the GitHub icon.
 
