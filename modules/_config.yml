@@ -31,7 +31,7 @@ html:
   use_issues_button: true
   use_repository_button: true
   extra_css:
-     - _static/custom.scss
+    - _static/custom.css
 
 sphinx:
   extra_extensions: [sphinx_multitoc_numbering, sphinxext.rediraffe, sphinx_tojupyter, sphinx_exercise, sphinx_togglebutton]
