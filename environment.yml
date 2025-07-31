@@ -1,0 +1,16 @@
+name: quantecon
+channels:
+  - default
+dependencies:
+  - python=3.12
+  - anaconda=2024.10
+  - pip
+  - pip:
+    - jupyter-book==1.0.3
+    - quantecon-book-theme==0.8.2
+    - sphinx-tojupyter==0.3.0
+    - sphinxext-rediraffe==0.2.7
+    - sphinx-exercise==1.0.1
+    - ghp-import==2.1.0
+    - sphinxcontrib-youtube==1.3.0
+    - sphinx-togglebutton==0.3.2
