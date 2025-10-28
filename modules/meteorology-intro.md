@@ -4,7 +4,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.2
+    jupytext_version: 1.18.1
 kernelspec:
   display_name: Python 3
   language: python
@@ -255,3 +255,11 @@ Be sure to...
 - run all of the tests and verify that they all pass, 
 - choose **Download as PDF** from the **File** menu
 - submit the .pdf file on **canvas**.
+
++++
+
+---
+
+## Notebook developed by:
+- Nathalie Guebels, Assistant Professor, Computer Science, Santa Barbara City College
+- Geordie Armstrong, Assistant Professor, Geography, Santa Barbara City College
