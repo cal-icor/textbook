@@ -10,11 +10,11 @@ This lesson does:
 **Tip:** Download: Open Data → *Reports of non-emergency problems submitted by users of Get It Done* →
 resource **Get It Done Requests closed in 2025** (CSV). Save locally and update `CSV_PATH` below.
 
-Last updated: 2025-11-03
-
 +++
 
-<img src="https://cal-icor.github.io/textbook.data/ucb/jupyter-con/sd-skyline.jpg" alt="San Diego Skyline"/>
+<figure>
+    <img src="https://cal-icor.github.io/textbook.data/ucb/jupyter-con/sd-skyline.jpg" alt="San Diego Skyline" />
+</figure>
 
 ```{code-cell} ipython3
 import pandas as pd
