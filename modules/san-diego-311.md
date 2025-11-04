@@ -1,3 +1,17 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.18.1
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
 # San Diego Get It Done (311)
 
 This lesson does:
@@ -9,8 +23,6 @@ This lesson does:
 
 **Tip:** Download: Open Data → *Reports of non-emergency problems submitted by users of Get It Done* →
 resource **Get It Done Requests closed in 2025** (CSV). Save locally and update `CSV_PATH` below.
-
-Last updated: 2025-11-03
 
 +++
 
