@@ -4,9 +4,6 @@
 format: jb-book
 root: intro
 parts:
-- caption: JupyterCon Demo
-  chapters:
-  - file: sd-demo
 - caption: City Planning
   chapters:
   - file: geopandas
