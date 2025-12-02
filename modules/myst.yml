@@ -1,0 +1,94 @@
+version: 1
+
+project:
+  title: Modules Showcase
+  authors:
+    - name: Jonathan Ferrari
+    - name: Edwin Vargas Navarro
+  github: cal-icor/textbook
+  bibliography:
+    - references.bib
+  jupyter: true
+  execute:
+    execute_notebooks: 'off'
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: exports/book.pdf
+
+  toc:
+    - file: intro.md
+    - title: JupyterCon Demo
+      children:
+        - file: san-diego-demo-jupytercon.md
+    - title: City Planning
+      children:
+        - file: geopandas.md
+        - file: large-datasets.md
+    - title: Economics
+      children:
+        - file: game-theory.md
+        - file: econometrics.md
+        - file: survival-analysis.md
+    - title: Environmental Science, Policy, and Management
+      children:
+        - file: biodiversity.md
+        - file: espm-regression.md
+        - file: espm-island.md
+    - title: Engineering
+      children:
+        - file: engin-7-numerical.md
+    - title: Ethnic Studies
+      children:
+        - file: covid-prisons.md
+    - title: Geography
+      children:
+        - file: geography-intro.md
+        - file: geography-development.md
+        - file: geography-population.md
+        - file: geography-globalization.md
+    - title: Meteorology
+      children:
+        - file: meteorology-intro.md
+        - file: meteorology-climate.md
+    - title: Anthropology
+      children:
+        - file: covid.md
+        - file: hiv-aids.md
+        - file: diabetes.md
+    - title: Data Science
+      children:
+        - file: data-4ac-intro.md
+    - title: Psychology
+      children:
+        - file: psych-167-regression.md
+    - title: Cognitive Science
+      children:
+        - file: brain-vs-ml.md
+    - title: Political Science
+      children:
+        - file: ideology.md
+        - file: election-hypothesis-testing.md
+        - file: bivariate-regression.md
+    - title: Legal Studies
+      children:
+        - file: legal-text.md
+
+site:
+  template: book-theme
+  base: /textbook/
+  actions:
+    - title: Open Issue
+      url: https://github.com/cal-icor/textbook/issues/new
+  options:
+    logo: _static/ds.svg
+    favicon: _static/favicon.ico
+    logo_text: Modules Showcase
+    extra_css:
+      - _static/custom.css
+    navigation_with_keys: true
+    show_toc_level: 2
+    show_navbar_depth: 2
+    use_issues_button: true
+    use_repository_button: true
+

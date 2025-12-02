@@ -1,65 +1,57 @@
-name: deploy-book
+name: Build & deploy Jupyter Book
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - 'modules/**'
+    branches: [main]
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
+
+env:
+  # BASE_URL determines where the website is served from, including CSS & JS assets
+  BASE_URL: /${{ github.event.repository.name }}
+
+permissions:
+  contents: read
+  pages: write           # for GitHub Pages
+  id-token: write        # for OIDC auth
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Set up Python 3.13
-        uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: 3.13
+          python-version: '3.12'
 
-      - name: Install dependencies
+      - name: Install deps
         run: |
-          pip install -U jupyter-book
-          # optional: project-specific deps
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install -r requirements.txt
+          # Install modules-specific dependencies if they exist
+          if [ -f modules/requirements.txt ]; then pip install -r modules/requirements.txt; fi
 
-      - name: Cache executed notebooks
-        uses: actions/cache@v3
-        with:
-          path: modules/_build/.jupyter_cache
-          key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
-  
       - name: Build the book
         run: |
-          jupyter-book build --all modules || { echo "Build failed"; exit 1; }
-          
-      - name: Upload Pages artifact
+          cd modules
+          set -e
+          jupyter book build --site
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "modules/_build/html"
+          path: ./modules/_build/html
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GH Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  cleanup:
-    runs-on: ubuntu-latest
-    needs: deploy
-    steps:
-      - name: Clean up build directory
-        run: rm -rf modules/_build
