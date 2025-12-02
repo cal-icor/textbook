@@ -213,7 +213,7 @@ You might be able to pick out the curly braces `{` and think this it's a diction
 
 ## *Aneides flavipunctatus*, Black Salamander
 
-![Aneides flavipunctatus by Freiermuth](https://calphotos.berkeley.edu/imgs/512x768/0000_0000/0512/0340.jpeg)
+![Aneides flavipunctatus by Freiermuth](_static/aneides-flavipunctatus.jpeg)
 
 When performing data analysis, it is always important to define a question that you seek the answer to. *The goal of finding the answer to this question will ultimately drive the queries and analysis styles you choose to use/write.*
 
@@ -527,7 +527,7 @@ in_stations_df.head()
 ## Part 3: Comparing California Oak species:<a id='oak'></a>
 
 
-| ![quercus douglassi](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Large_Blue_Oak.jpg/220px-Large_Blue_Oak.jpg)  | ![quercus lobata](https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Valley_Oak_Mount_Diablo.jpg/220px-Valley_Oak_Mount_Diablo.jpg) | ![quercus durata](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Quercusduratadurata.jpg/220px-Quercusduratadurata.jpg) | ![quercus agrifolia](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Quercus_agrifolia_foliage.jpg/220px-Quercus_agrifolia_foliage.jpg) |
+| ![quercus douglassi](_static/quercus-douglassi.jpg)  | ![quercus lobata](_static/quercus-lobata.jpg) | ![quercus durata](_static/quercus-durata.jpg) | ![quercus agrifolia](_static/quercus-agrifolia.jpg) |
 |:---:|:---:|:---:|:---:|
 | *Quercus douglassi* | *Quercus lobata* | *Quercus durata* | *Quercus agrifolia*|
 
@@ -619,7 +619,7 @@ Question: Searching and mapping multiple species can be useful. Which species wo
 ### ---
 
 ## Part 4: Cal-Adapt API<a id='adapt'></a>
-<a target=_blank href="https://calphotos.berkeley.edu/cgi/img_query?enlarge=0000+0000+0715+1756"> ![California Damsels dragonfly](https://calphotos.berkeley.edu/imgs/128x192/0000_0000/0715/1756.jpeg)</a>Let's work with California Damsels dragonfly (*Argia agrioides*) data from the GBIF API and climate data from Cal-Adapt. (image from CalPhotos)
+<a target=_blank href="https://calphotos.berkeley.edu/cgi/img_query?enlarge=0000+0000+0715+1756"> ![California Damsels dragonfly](_static/california-damsels.jpeg)</a>Let's work with California Damsels dragonfly (*Argia agrioides*) data from the GBIF API and climate data from Cal-Adapt. (image from CalPhotos)
 
 ```{code-cell} ipython3
 req = GBIFRequest()  # creating a request to the API
