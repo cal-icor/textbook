@@ -39,12 +39,12 @@ jobs:
         run: |
           cd modules
           set -e
-          jupyter book build --site
+          jupyter book build --html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./modules/_build/site
+          path: ./modules/_build/html
 
   deploy:
     needs: build

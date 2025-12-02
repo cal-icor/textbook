@@ -76,11 +76,11 @@ project:
 
 site:
   template: book-theme
-  base: /textbook/
   actions:
     - title: Open Issue
       url: https://github.com/cal-icor/textbook/issues/new
   options:
+    base: /textbook/
     logo: _static/ds.svg
     favicon: _static/favicon.ico
     logo_text: Modules Showcase
