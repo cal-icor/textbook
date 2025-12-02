@@ -30,7 +30,7 @@ jobs:
         run: |
           cd modules
           set -e
-          jupyter book build --html || jupyter-book build --html
+          jupyter book build --site
 
       - name: Determine build output path
         id: build_path
