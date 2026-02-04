@@ -1,7 +1,9 @@
-# Jupyter Book
-jupyter-book
+# Jupyter Book and execution
+jupyter-book==2.1.2
 mystmd
 ghp-import
+jupyter-server
+ipykernel
 
 # Core data science packages
 numpy
@@ -11,6 +13,7 @@ scikit-learn
 
 # Visualization
 matplotlib
+Pillow
 seaborn
 plotly
 folium
@@ -34,6 +37,9 @@ svgling
 httpimport
 requests
 otter-grader
+
+# Excel support for pandas
+openpyxl
 
 # Data science library
 datascience

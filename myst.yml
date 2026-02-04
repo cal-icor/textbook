@@ -20,59 +20,59 @@ project:
     - file: modules/intro.md
     - title: JupyterCon Demo
       children:
-        - file: modules/san-diego-demo-jupytercon.md
+        - file: modules/san-diego-demo-jupytercon.ipynb
     - title: City Planning
       children:
-        - file: modules/geopandas.md
-        - file: modules/large-datasets.md
+        - file: modules/geopandas.ipynb
+        - file: modules/large-datasets.ipynb
     - title: Economics
       children:
-        - file: modules/game-theory.md
-        - file: modules/econometrics.md
-        - file: modules/survival-analysis.md
+        - file: modules/game-theory.ipynb
+        - file: modules/econometrics.ipynb
+        - file: modules/survival-analysis.ipynb
     - title: Environmental Science, Policy, and Management
       children:
-        - file: modules/biodiversity.md
-        - file: modules/espm-regression.md
-        - file: modules/espm-island.md
+        - file: modules/biodiversity.ipynb
+        - file: modules/espm-regression.ipynb
+        - file: modules/espm-island.ipynb
     - title: Engineering
       children:
-        - file: modules/engin-7-numerical.md
+        - file: modules/engin-7-numerical.ipynb
     - title: Ethnic Studies
       children:
-        - file: modules/covid-prisons.md
+        - file: modules/covid-prisons.ipynb
     - title: Geography
       children:
-        - file: modules/geography-intro.md
-        - file: modules/geography-development.md
-        - file: modules/geography-population.md
-        - file: modules/geography-globalization.md
+        - file: modules/geography-intro.ipynb
+        - file: modules/geography-development.ipynb
+        - file: modules/geography-population.ipynb
+        - file: modules/geography-globalization.ipynb
     - title: Meteorology
       children:
-        - file: modules/meteorology-intro.md
-        - file: modules/meteorology-climate.md
+        - file: modules/meteorology-intro.ipynb
+        - file: modules/meteorology-climate.ipynb
     - title: Anthropology
       children:
-        - file: modules/covid.md
-        - file: modules/hiv-aids.md
-        - file: modules/diabetes.md
+        - file: modules/covid.ipynb
+        - file: modules/hiv-aids.ipynb
+        - file: modules/diabetes.ipynb
     - title: Data Science
       children:
-        - file: modules/data-4ac-intro.md
+        - file: modules/data-4ac-intro.ipynb
     - title: Psychology
       children:
-        - file: modules/psych-167-regression.md
+        - file: modules/psych-167-regression.ipynb
     - title: Cognitive Science
       children:
-        - file: modules/brain-vs-ml.md
+        - file: modules/brain-vs-ml.ipynb
     - title: Political Science
       children:
-        - file: modules/ideology.md
-        - file: modules/election-hypothesis-testing.md
-        - file: modules/bivariate-regression.md
+        - file: modules/ideology.ipynb
+        - file: modules/election-hypothesis-testing.ipynb
+        - file: modules/bivariate-regression.ipynb
     - title: Legal Studies
       children:
-        - file: modules/legal-text.md
+        - file: modules/legal-text.ipynb
 
 site:
   template: book-theme
