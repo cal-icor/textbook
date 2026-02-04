@@ -1,3 +1,39 @@
-jupyter-book==2.0.2
+# Jupyter Book
+jupyter-book
 mystmd
-ghp-import==2.1.0
+ghp-import
+
+# Core data science packages
+numpy
+pandas
+scipy
+scikit-learn
+
+# Visualization
+matplotlib
+seaborn
+plotly
+folium
+
+# Statistics and modeling
+statsmodels
+lifelines
+
+# Geospatial
+geopandas
+shapely
+
+# Interactive widgets
+ipywidgets
+
+# Text processing
+nltk
+svgling
+
+# Utilities
+httpimport
+requests
+otter-grader
+
+# Data science library
+datascience

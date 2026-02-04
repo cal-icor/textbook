@@ -1,0 +1,93 @@
+version: 1
+
+project:
+  title: Modules Showcase
+  authors:
+    - name: Jonathan Ferrari
+    - name: Edwin Vargas Navarro
+  github: cal-icor/textbook
+  bibliography:
+    - modules/references.bib
+  jupyter: true
+  execute:
+    execute_notebooks: 'off'
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: modules/exports/book.pdf
+
+  toc:
+    - file: modules/intro.md
+    - title: JupyterCon Demo
+      children:
+        - file: modules/san-diego-demo-jupytercon.md
+    - title: City Planning
+      children:
+        - file: modules/geopandas.md
+        - file: modules/large-datasets.md
+    - title: Economics
+      children:
+        - file: modules/game-theory.md
+        - file: modules/econometrics.md
+        - file: modules/survival-analysis.md
+    - title: Environmental Science, Policy, and Management
+      children:
+        - file: modules/biodiversity.md
+        - file: modules/espm-regression.md
+        - file: modules/espm-island.md
+    - title: Engineering
+      children:
+        - file: modules/engin-7-numerical.md
+    - title: Ethnic Studies
+      children:
+        - file: modules/covid-prisons.md
+    - title: Geography
+      children:
+        - file: modules/geography-intro.md
+        - file: modules/geography-development.md
+        - file: modules/geography-population.md
+        - file: modules/geography-globalization.md
+    - title: Meteorology
+      children:
+        - file: modules/meteorology-intro.md
+        - file: modules/meteorology-climate.md
+    - title: Anthropology
+      children:
+        - file: modules/covid.md
+        - file: modules/hiv-aids.md
+        - file: modules/diabetes.md
+    - title: Data Science
+      children:
+        - file: modules/data-4ac-intro.md
+    - title: Psychology
+      children:
+        - file: modules/psych-167-regression.md
+    - title: Cognitive Science
+      children:
+        - file: modules/brain-vs-ml.md
+    - title: Political Science
+      children:
+        - file: modules/ideology.md
+        - file: modules/election-hypothesis-testing.md
+        - file: modules/bivariate-regression.md
+    - title: Legal Studies
+      children:
+        - file: modules/legal-text.md
+
+site:
+  template: book-theme
+  actions:
+    - title: Open Issue
+      url: https://github.com/cal-icor/textbook/issues/new
+  options:
+    base: /textbook/
+    logo: modules/_static/ds.svg
+    favicon: modules/_static/favicon.ico
+    logo_text: Modules Showcase
+    extra_css:
+      - modules/_static/custom.css
+    navigation_with_keys: true
+    show_toc_level: 2
+    show_navbar_depth: 2
+    use_issues_button: true
+    use_repository_button: true
