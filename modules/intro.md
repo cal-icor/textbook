@@ -4,13 +4,36 @@ This textbook serves as an interactive resource for courses across various disci
 
 ## Contributions
 
-To contribute to this collection, please submit a pull request to [textbook.notebooks](https://github.com/cal-icor/textbook.notebooks). See [instructions for contribution here](https://github.com/cal-icor/textbook.notebooks/blob/main/README.md), and the [pull request template here](https://github.com/cal-icor/textbook.notebooks/blob/main/.github/pull_request_template.md).
+To contribute to this collection, please submit a pull request to [this repository](https://github.com/cal-icor/textbook). See [instructions for contribution](https://github.com/cal-icor/textbook/blob/main/README.md) and the [pull request template](https://github.com/cal-icor/textbook/blob/main/.github/pull_request_template.md).
 
-## Use
+## How to use this textbook
 
-While browsing the available notebooks, this site allows for static viewing of the notebooks. For additional interaction, you can view the toolbar in the top right corner of the screen. The play icon will allow you to launch the notebook in your format of choice, either on a private Jupyter Hub (e.g. [jupyter.cal-icor.org](https://jupyter.cal-icor.org), [datahub.berkeley.edu](https://datahub.berkeley.edu), etc.) or a public/free resource like [Colab](https://colab.research.google.com/) or [BinderHub](https://binderhub.readthedocs.io/en/latest/).
+The live textbook is available at **[https://cal-icor.github.io/textbook/](https://cal-icor.github.io/textbook/)**. You can read pages statically or run code interactively as follows.
 
-You can also download a PDF of the notebook by clicking on the page icon or view the source of the site by clicking the GitHub icon.
+### Launch and run code
+
+```{tip} Quick start
+1. **Start the kernel:** Click the **power button** (top right of the page). Wait until the kernel or environment is ready.
+2. **Run code:** Use the **play button** next to a cell to run it, or the **Run all** play button (top right, follows you as you scroll) to run every cell on the page.
+```
+
+```{note} First time on Binder?
+The first time you launch with Binder, building the environment can take a few minutes. Later visits are usually faster.
+```
+
+### Run in Binder or your own hub
+
+```{tip}
+- **External link** (next to the play button): Opens the notebook in a **new browser tab** using [Binder](https://mybinder.org/) (free, no account required).
+- **Rocket ship** (launch menu): Choose **Binder** or **Custom** and paste the URL of your own Jupyter Hub ([jupyter.cal-icor.org](https://jupyter.cal-icor.org), [datahub.berkeley.edu](https://datahub.berkeley.edu), etc.).
+```
+
+### Other actions
+
+```{seealso}
+- **Download:** Use the **download** control to save the notebook (e.g. `.ipynb`).
+- **View source:** Use the **GitHub icon** to open the source in the repository.
+```
 
 ```{tableofcontents}
 ```
